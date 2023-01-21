@@ -2,6 +2,8 @@ import './App.scss';
 import { observer } from 'mobx-react-lite';
 import { BrowserRouter as Router, Routes, Route, useParams, useNavigate, useLocation } from 'react-router-dom';
 import LandingPage from './pages/LandingPage/LandingPage';
+import Navbar from './components/Shared/Navbar/Navbar';
+import Footer from './components/Shared/Footer/Footer';
 
 function App() {
   const routes = [
@@ -15,9 +17,11 @@ function App() {
           {routes.map((route, index) => (
             <Route key={index} path={route.path} element={
               <>
+              <Navbar />
                 <div className='Route_Container'>
                   {route.element}
                 </div>
+                <Footer />
               </>
             } />
           ))}

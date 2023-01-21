@@ -1,0 +1,98 @@
+.Navbar_Container {
+    height: 5.312rem;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    .Navbar_MainBar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 45px;
+        width: 100%;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid rgba($color: #000000, $alpha: 0.35);
+
+        .Spacer {
+            width: 68px;
+            height: 68px;
+            user-select: none;
+            -webkit-user-drag: none;
+            padding: 0 52px;
+        }
+
+        .Navbar_LinkContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            .Navbar_LinkWrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                .Navbar_Link {
+                    margin: 0 1.5rem;
+                    a {
+                        text-decoration: none;
+                        color: #000;
+                        font-size: 1rem;
+                        font-weight: 400;
+                        &:hover {
+                            cursor: pointer;
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .Navbar_rotatedCube {
+        width: 57px;
+        height: 57px;
+        position: absolute;
+
+        //transform: matrix(0.71, 0.73, -0.68, 0.71,0 ,0);
+        transform: translate(-50%, -50%) rotate(45deg);
+        top: calc(50% + 4px);
+        left: 50%;
+        background-color: #fff;
+        border-top: none;
+        border-left: none;
+
+        border-right: 2px solid rgba($color: #000000, $alpha: 0.35);
+        border-bottom: 2px solid rgba($color: #000000, $alpha: 0.35);
+
+        .Navbar_MainBar_logo {
+            width: 68px;
+            height: 68px;
+            user-select: none;
+            -webkit-user-drag: none;
+            padding: 0 52px;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            position: relative;
+            top: 40%;
+            left: 40%;
+            &:hover {
+                cursor: pointer;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
