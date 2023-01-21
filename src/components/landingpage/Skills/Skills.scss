@@ -1,0 +1,121 @@
+.Skills_Container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(../../../assets/skills_background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    .Skills_Wrapper {
+        width: 90%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        .Skills_ContentContainer {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 100%;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            .Skills_PicContainer {
+                flex: 1;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+
+            }
+
+            .Skills_InfoContainer {
+                max-width: 565px;
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+                :first-child {
+                    margin-bottom: 50px;
+                }
+                .Skills_InfoContentContainer {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    .Skills_InfoTitle {
+                        font-size: 3rem;
+                        font-weight: 600;
+                        color: #01c38e;
+                        width: 100%;
+                        text-align: start;
+                        margin: 0;
+                        margin-bottom: 15px;
+                    }
+                    .Skills_InfoDescription {
+                        font-size: 0.875rem;
+                        font-weight: 400;
+                        color: #fff;
+                        width: 100%;
+                        text-align: justify;
+                        margin: 0;
+                        margin-bottom: 15px;
+                    }
+                }
+                .Skills_TableContainer{
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    height: 100%;
+                    justify-content: space-between;
+                    .Skills_TableContent{
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        height: 100%;
+                        .Skills_TableTitle{
+                            font-size: 0.875rem;
+                            font-weight: 600;
+                            color: #01c38e;
+                            width: 100%;
+                            text-align: start;
+                            margin: 0;
+                            margin-bottom: 20px;
+                        }
+                        .Skills_TableToolsContainer{
+                            display: grid;
+                            grid-template-rows: repeat(5, 1fr);
+                            grid-auto-flow: column;
+                            grid-gap: 15px;
+                            width: 100%;
+                            height: 100%;
+                            margin: 0;
+                            padding: 0;
+                            .Skills_TableTool{
+                                text-decoration: none;
+                                list-style: none;
+                                font-size: 0.875rem;
+                                font-weight: 400;
+                                color: #fff;
+                                width: 100%;
+                                text-align: start;
+                                margin: 0;
+                                padding: 0;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
