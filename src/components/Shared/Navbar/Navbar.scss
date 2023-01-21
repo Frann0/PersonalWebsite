@@ -1,6 +1,5 @@
 .Navbar_Container {
     height: 5.312rem;
-    background-color: #fff;
     position: fixed;
     top: 0;
     left: 0;
@@ -15,6 +14,7 @@
         border-top: none;
         border-left: none;
         border-right: none;
+        background-color: #fefefe;
         border-bottom: 2px solid rgba($color: #000000, $alpha: 0.35);
 
         .Spacer {

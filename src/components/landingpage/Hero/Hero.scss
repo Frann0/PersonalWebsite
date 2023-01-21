@@ -1,0 +1,20 @@
+.Hero_Container {
+    height: 1000px;
+    width: 100%;
+
+    background: url(../../../assets/hero.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .Hero_Wrapper{
+        height: 100%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+}

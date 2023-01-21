@@ -9,13 +9,11 @@ import Contact from '../../components/landingpage/Contact/Contact';
 const LandingPage = () => {
   return (
     <div className='LandingPage_Container'>
-      <div className='LandingPage_Wrapper'>
-        <Hero />
-        <About />
-        <Skills />
-        <Work />
-        <Contact />
-      </div>
+      <Hero />
+      <About />
+      <Skills />
+      <Work />
+      <Contact />
     </div>
   )
 }
