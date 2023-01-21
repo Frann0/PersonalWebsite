@@ -20,8 +20,8 @@ function App() {
               <Navbar />
                 <div className='Route_Container'>
                   {route.element}
+                  
                 </div>
-                <Footer />
               </>
             } />
           ))}

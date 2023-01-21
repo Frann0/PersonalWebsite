@@ -6,6 +6,7 @@ import About from '../../components/landingpage/About/About';
 import Skills from '../../components/landingpage/Skills/Skills';
 import Work from '../../components/landingpage/Work/Work';
 import Contact from '../../components/landingpage/Contact/Contact';
+import Footer from '../../components/Shared/Footer/Footer';
 const LandingPage = () => {
   return (
     <div className='LandingPage_Container'>
@@ -14,6 +15,8 @@ const LandingPage = () => {
       <Skills />
       <Work />
       <Contact />
+      
+      <Footer />
     </div>
   )
 }

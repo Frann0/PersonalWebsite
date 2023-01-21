@@ -1,7 +1,7 @@
 import React from 'react'
 import './Hero.scss'
 import  logo  from '../../../assets/shared/logo.svg'
-
+import scroll from '../../../assets/shared/scroll.svg'
 
 const Hero = () => {
   return (
@@ -20,7 +20,7 @@ const Hero = () => {
             UI/UX Designer - Frontend Web Developer
           </h2>
           <p className='Hero_Description'>
-            I am a passionate UI/UX Designer and Frontend Developer
+            I am a <span className='Hero_Highlight'>passionate</span> UI/UX Designer and Frontend Developer
             
           </p>
           <p className='Hero_Description'>
@@ -33,6 +33,9 @@ const Hero = () => {
           </button>
         </div>
 
+        <div className='Hero_ScrollContainer'>
+          <img src={scroll} alt="" />
+        </div>
       </div>
     </div>
   )

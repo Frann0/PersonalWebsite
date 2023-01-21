@@ -1,20 +1,124 @@
 .Hero_Container {
-    height: 1000px;
+    margin-top: 40px;
+    height: fit-content;
     width: 100%;
-
+    display: flex;
+    justify-content: center;
     background: url(../../../assets/hero.png);
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    .Hero_Wrapper{
+    .Hero_Wrapper {
         height: 100%;
         width: 90%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        
-    }
+        .Hero_ImageContainer {
+            width: 200px;
+            height: 200px;
+            margin-top: 180px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            margin-bottom: 30px;
+        }
+        .Hero_ContentContainer {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
+            .Hero_Name {
+                font-size: 2rem;
+                font-weight: 600;
+                color: #12151a;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+            }
+            .Hero_Title {
+                font-size: 1.25rem;
+                font-weight: 200;
+                color: #373737;
+                text-align: center;
+
+                margin: 0 0 25px 0;
+
+                padding: 0;
+            }
+            .Hero_Description {
+                font-size: 1.25rem;
+                font-weight: 400;
+                color: #373737;
+                text-align: center;
+                margin: 0 0 0 0;
+                padding: 0;
+
+                &:last-child {
+                    margin-bottom: 25px;
+                }
+            }
+            .Hero_Highlight {
+                color: #01c38c;
+                font-weight: 600;
+            }
+        }
+
+        .Hero_CalltoactionContainer {
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 150px;
+
+            .Hero_CalltoactionButton {
+                width: fit-content;
+                height: 40px;
+                border-radius: 20px;
+                background-color: #12151a;
+                color: #fff;
+                font-size: 1rem;
+                padding: 0 40px;
+                border: none;
+                cursor: pointer;
+            }
+            
+        }
+        .Hero_ScrollContainer {
+            margin-bottom: 150px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            
+            img{
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+                &:hover{
+                    cursor: pointer;
+                    animation: bounce 1s infinite ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
