@@ -31,8 +31,8 @@ const Contact = () => {
           <div className={`Contact_InputContainer ${subject.length !== 0 ? 'Contact_Filled' : ''}`}>
             <input type="text" className={`Contact_Input `} value={subject} placeholder='Subject' onChange={(e) => setSubject(e.target.value)} />
           </div>
-          <div className={`Contact_InputContainer Contact_InputLarge ${name.length !== 0 ? 'Contact_Filled' : ''}`}>
-            <textarea className={`Contact_Textarea `} value={name} placeholder='Your name' onChange={(e) => setName(e.target.value)} />
+          <div className={`Contact_InputContainer Contact_InputLarge ${message.length !== 0 ? 'Contact_Filled' : ''}`}>
+            <textarea className={`Contact_Textarea `} value={message} placeholder='Your name' onChange={(e) => setMessage(e.target.value)} />
           </div>
         </div>
         <div className='Contact_SendContainer'>
