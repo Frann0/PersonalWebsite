@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Icon from '../icon/Icon'
 import './Footer.scss'
 const Footer = () => {
@@ -37,7 +38,9 @@ const Footer = () => {
         </div>
         <div className='Footer_Socials'>
           {socials.map((social, index) => (
-            <Icon name={social.name} width={20} height={20} key={index} />
+            <Link to={social.link} key={index} target='_blank' rel='noreferrer'>
+              <Icon name={social.name} width={20} height={20} key={index} />
+            </Link>
           ))}
         </div>
       </div>
