@@ -36,7 +36,7 @@ const Hero = () => {
           </p>
         </div>
         <div className='Hero_CalltoactionContainer'>
-          <button className='Hero_CalltoactionButton'>
+          <button className='Hero_CalltoactionButton' onClick={goTo('contact')}>
             Contact me
           </button>
         </div>
