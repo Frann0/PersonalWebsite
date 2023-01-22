@@ -7,7 +7,7 @@ const Contact = () => {
   const [subject, setSubject] = React.useState('')
 
   return (
-    <div className='Contact_Container'>
+    <div className='Contact_Container' id='contact'>
       <div className='Contact_Wrapper'>
         <div className='Contact_InfoContainer'>
           <h1 className='Contact_Title'>Let's work together.</h1>

@@ -4,8 +4,16 @@ import  logo  from '../../../assets/shared/logo.svg'
 import scroll from '../../../assets/shared/scroll.svg'
 
 const Hero = () => {
+
+  const goTo = (link: string) => {
+    return (e: any) => {
+        e.preventDefault()
+        window.location.href = `/#${link}`
+    }
+}
+
   return (
-    <div className='Hero_Container'>
+    <div className='Hero_Container' id='hero'>
       <div className='Hero_Wrapper'>
 
         <div className='Hero_ImageContainer'>
@@ -34,7 +42,7 @@ const Hero = () => {
         </div>
 
         <div className='Hero_ScrollContainer'>
-          <img src={scroll} alt="" />
+          <img src={scroll} alt="" onClick={goTo('about')}/>
         </div>
       </div>
     </div>

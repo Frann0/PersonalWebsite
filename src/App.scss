@@ -1,4 +1,4 @@
-.App {  
+.App {
   display: flex;
   flex-direction: column;
   background-color: var(--color-background);
@@ -17,6 +17,10 @@ body {
   height: 100vh; /* fallback for Js load */
   height: var(--doc-height);
   width: 100%;
+}
+
+* {
+  scroll-behavior: smooth;
 }
 
 #root {
@@ -59,7 +63,7 @@ body {
   }
 }
 
-.Route_Container{
+.Route_Container {
   display: flex;
   flex-direction: row;
   flex: 1;
@@ -72,6 +76,4 @@ body {
   background: transparent;
 }
 
-
 $color-background: #f5f5f5;
-

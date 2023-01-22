@@ -1,31 +1,34 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
 import './Navbar.scss'
 import logo from '../../../assets/shared/logo.svg'
 
 const Navbar = () => {
 
-    const navigate = useNavigate();
-
     const links = [
         {
             name: 'About',
-            link: '#'
+            link: 'about'
         },
         {
             name: 'Skills',
-            link: '#'
+            link: 'skills'
         },
         {
             name: 'Work',
-            link: '#'
+            link: 'work'
         },
         {
             name: 'Contact',
-            link: '#'
+            link: 'contact'
         }
     ]
 
+    const goTo = (link: string) => {
+        return (e: any) => {
+            e.preventDefault()
+            window.location.href = `/#${link}`
+        }
+    }
 
 
     return (
@@ -35,7 +38,7 @@ const Navbar = () => {
                     <ul className='Navbar_LinkWrapper'>
                         {links.slice(0, 2).map((link, index) => (
                             <li className='Navbar_Link' key={index}>
-                                <Link to={link.link}>{link.name}</Link>
+                                <a href='/' onClick={goTo(link.link)} >{link.name}</a>
                             </li>
                         ))}
                     </ul>
@@ -45,14 +48,14 @@ const Navbar = () => {
                     <ul className='Navbar_LinkWrapper'>
                         {links.slice(2).map((link, index) => (
                             <li className='Navbar_Link' key={index}>
-                                <Link to={link.link}>{link.name}</Link>
+                                <a href='/' onClick={goTo(link.link)} >{link.name}</a>
                             </li>
                         ))}
                     </ul>
                 </div>
             </div>
             <div className='Navbar_rotatedCube'>
-                <div className='Navbar_MainBar_logo'>
+                <div className='Navbar_MainBar_logo' onClick={goTo('hero')}>
                     <img src={logo} alt="" />
                 </div>
             </div>

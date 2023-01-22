@@ -30,7 +30,7 @@ const Skills = () => {
   ]
 
   return (
-    <div className='Skills_Container'>
+    <div className='Skills_Container' id='skills'>
       <div className='Skills_Wrapper'>
         <div className='Skills_ContentContainer'>
           <div className='Skills_PicContainer'>

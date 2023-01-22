@@ -36,7 +36,7 @@ const Work = () => {
   ]
 
   return (
-    <div className='Work_Container'>
+    <div className='Work_Container' id='work'>
       <div className='Work_Wrapper'>
         <div className='Work_InfoContainer'>
           <h1 className='Work_Title'>Latest Work.</h1>

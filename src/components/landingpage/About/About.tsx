@@ -4,7 +4,7 @@ import billede from '../../../assets/billede.png'
 
 const About = () => {
   return (
-    <div className='About_Container'>
+    <div className='About_Container' id='about'>
       <div className='About_Wrapper'>
         <div className='About_ContentContainer'>
           {/**
