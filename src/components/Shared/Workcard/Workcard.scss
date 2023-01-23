@@ -1,0 +1,43 @@
+.Workcard_CardContainer {
+    width: 100%;
+    min-height: 300px;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 63.02%, #000000f0 100%), url(../../../assets/hero.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-decoration: none;
+    outline: 1px solid #1a1e29;
+    transition: all 0.3s ease-in-out;
+    filter: saturate(0) contrast(1.15) brightness(1.05);
+
+    &:hover {
+        transform: scale(1.025);
+        filter: saturate(100%) contrast(1.15) brightness(1.05);
+    }
+
+    .Workcard_Card {
+        padding: 0 0 25px 25px;
+        width: 100%;
+        .Workcard_CardTitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #fff;
+            width: 100%;
+            text-align: start;
+            margin: 0;
+        }
+        .Workcard_CardCategory {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: rgba($color: #ffffff, $alpha: 0.5);
+            width: 100%;
+            text-align: start;
+            margin: 0;
+        }
+    }
+}

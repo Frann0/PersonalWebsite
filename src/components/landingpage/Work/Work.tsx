@@ -1,7 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import Workcard from '../../Shared/Workcard/Workcard'
 import './Work.scss'
 const Work = () => {
+  const navigate = useNavigate()
+
   const WorkCards = [
     {
       title: 'Portfolio',
@@ -35,6 +38,10 @@ const Work = () => {
     },
   ]
 
+  const goTo = (path: string) => () => {
+    navigate(path)
+  }
+
   return (
     <div className='Work_Container' id='work'>
       <div className='Work_Wrapper'>
@@ -46,21 +53,12 @@ const Work = () => {
         </div>
         <div className='Work_CardsContainer'>
           {WorkCards.map((card, index) => (
-            <Link className='Work_CardContainer' to={card.link} key={index}>
-              <div className='Work_Card'>
-                <h1 className='Work_CardTitle'>
-                  {card.title}
-                </h1>
-                <p className='Work_CardCategory'>
-                  {card.category}
-                </p>
-              </div>
-            </Link>
+            <Workcard {...card} key={index} />
           ))}
 
         </div>
         <div className='Work_ViewAllContainer'>
-          <button className='Work_ViewAllButton'>
+          <button className='Work_ViewAllButton' onClick={goTo('/work')}>
             View all
           </button>
         </div>

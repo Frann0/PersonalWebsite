@@ -1,12 +1,12 @@
-.Work_Container {
+.WorkComponent_Container {
     width: 100%;
-    height: fit-content;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    .Work_Wrapper {
+    .WorkComponent_Wrapper {
         width: 90%;
         height: fit-content;
         display: flex;
@@ -15,14 +15,14 @@
         justify-content: center;
         margin: 0;
         padding: 0;
-        .Work_InfoContainer {
+        .WorkComponent_InfoContainer {
             width: 100%;
             height: fit-content;
             display: flex;
             flex-direction: column;
             margin-top: 100px;
             margin-bottom: 50px;
-            .Work_Title {
+            .WorkComponent_Title {
                 font-size: 3rem;
                 font-weight: 600;
                 color: #1a1e29;
@@ -31,7 +31,7 @@
                 margin: 0;
                 margin-bottom: 15px;
             }
-            .Work_Description {
+            .WorkComponent_Description {
                 font-size: 0.875rem;
                 font-weight: 400;
                 color: #000;
@@ -40,7 +40,7 @@
                 margin: 0;
             }
         }
-        .Work_CardsContainer {
+        .WorkComponent_CardsContainer {
             width: 100%;
             height: fit-content;
             display: grid;
@@ -48,9 +48,6 @@
             grid-template-rows: repeat(2, 1fr);
             grid-gap: 10px;
             margin-bottom: 30px;
-
-
-
 
             .Workcard_CardContainer:nth-child(1) {
                 grid-column: 1 / 1;

@@ -1,5 +1,5 @@
 import React from 'react'
-import Work from '../../components/landingpage/Work/Work'
+import Work from '../../components/workpage/Work/Work'
 import Footer from '../../components/Shared/Footer/Footer'
 import './WorkPage.scss'
 const WorkPage = () => {
