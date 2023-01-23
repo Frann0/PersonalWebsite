@@ -7,32 +7,32 @@ const Work = () => {
         {
             title: 'Portfolio',
             category: 'Web Design',
-            link: 'https://www.google.com',
+            link: '/project/1',
         },
         {
             title: 'Portfolio',
             category: 'Web Design',
-            link: 'https://www.google.com',
+            link: '/project/1',
         },
         {
             title: 'Portfolio',
             category: 'Web Design',
-            link: 'https://www.google.com',
+            link: '/project/1',
         },
         {
             title: 'Portfolio',
             category: 'Web Design',
-            link: 'https://www.google.com',
+            link: '/project/1',
         },
         {
             title: 'Portfolio',
             category: 'Web Design',
-            link: 'https://www.google.com',
+            link: '/project/1',
         },
         {
             title: 'Portfolio',
             category: 'Web Design',
-            link: 'https://www.google.com',
+            link: '/project/1',
         },
     ]
 

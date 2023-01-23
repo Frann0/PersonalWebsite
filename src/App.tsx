@@ -5,11 +5,13 @@ import LandingPage from './pages/LandingPage/LandingPage';
 import Navbar from './components/Shared/Navbar/Navbar';
 import Footer from './components/Shared/Footer/Footer';
 import WorkPage from './pages/WorkPage/WorkPage';
+import ProjectPage from './pages/ProjectPage/ProjectPage';
 
 function App() {
   const routes = [
     { path: '/', element: <LandingPage /> },
     { path: '/work', element: <WorkPage /> },
+    { path: '/project/:id', element: <ProjectPage /> }
   ]
 
   return (
