@@ -1,46 +1,16 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { useStore } from '../../../stores/store'
 import Workcard from '../../Shared/Workcard/Workcard'
 import './Work.scss'
 const Work = () => {
   const navigate = useNavigate()
 
-  const WorkCards = [
-    {
-      title: 'Portfolio',
-      category: 'Web Design',
-      link: 'https://www.google.com',
-    },
-    {
-      title: 'Portfolio',
-      category: 'Web Design',
-      link: 'https://www.google.com',
-    },
-    {
-      title: 'Portfolio',
-      category: 'Web Design',
-      link: 'https://www.google.com',
-    },
-    {
-      title: 'Portfolio',
-      category: 'Web Design',
-      link: 'https://www.google.com',
-    },
-    {
-      title: 'Portfolio',
-      category: 'Web Design',
-      link: 'https://www.google.com',
-    },
-    {
-      title: 'Portfolio',
-      category: 'Web Design',
-      link: 'https://www.google.com',
-    },
-  ]
-
   const goTo = (path: string) => () => {
     navigate(path)
   }
+
+  const { projectStore } = useStore();
 
   return (
     <div className='Work_Container' id='work'>
@@ -52,7 +22,7 @@ const Work = () => {
           </p>
         </div>
         <div className='Work_CardsContainer'>
-          {WorkCards.map((card, index) => (
+          {projectStore.projects.map((card, index) => (
             <Workcard {...card} key={index} />
           ))}
 

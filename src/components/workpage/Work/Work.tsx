@@ -1,40 +1,10 @@
 import React from 'react'
+import { useStore } from '../../../stores/store'
 import Workcard from '../../Shared/Workcard/Workcard'
 import './Work.scss'
 const Work = () => {
 
-    const WorkCards = [
-        {
-            title: 'Portfolio',
-            category: 'Web Design',
-            link: '/project/1',
-        },
-        {
-            title: 'Portfolio',
-            category: 'Web Design',
-            link: '/project/1',
-        },
-        {
-            title: 'Portfolio',
-            category: 'Web Design',
-            link: '/project/1',
-        },
-        {
-            title: 'Portfolio',
-            category: 'Web Design',
-            link: '/project/1',
-        },
-        {
-            title: 'Portfolio',
-            category: 'Web Design',
-            link: '/project/1',
-        },
-        {
-            title: 'Portfolio',
-            category: 'Web Design',
-            link: '/project/1',
-        },
-    ]
+    const { projectStore } = useStore();
 
     return (
         <div className='WorkComponent_Container' id='work'>
@@ -46,7 +16,7 @@ const Work = () => {
                     </p>
                 </div>
                 <div className='WorkComponent_CardsContainer'>
-                    {WorkCards.map((card, index) => (
+                    {projectStore.projects.map((card, index) => (
                         <Workcard {...card} key={index} />
                     ))}
 
