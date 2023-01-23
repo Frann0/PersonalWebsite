@@ -19,10 +19,9 @@ function App() {
           {routes.map((route, index) => (
             <Route key={index} path={route.path} element={
               <>
-              <Navbar />
+                <Navbar />
                 <div className='Route_Container'>
                   {route.element}
-                  
                 </div>
               </>
             } />

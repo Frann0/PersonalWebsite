@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     .Work_Wrapper {
         width: 90%;
         height: fit-content;
@@ -118,14 +119,14 @@
                 grid-row: 2 / 2;
             }
         }
-        .Work_ViewAllContainer{
+        .Work_ViewAllContainer {
             width: 100%;
             height: fit-content;
             display: flex;
             justify-content: center;
             align-items: center;
             margin-bottom: 100px;
-            .Work_ViewAllButton{
+            .Work_ViewAllButton {
                 width: fit-content;
                 height: 40px;
                 display: flex;
@@ -141,6 +142,5 @@
                 cursor: pointer;
             }
         }
-
     }
 }
