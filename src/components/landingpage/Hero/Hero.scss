@@ -4,7 +4,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background: url(../../../assets/hero.png);
+    background: url(../../../assets/hero6.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -48,7 +48,7 @@
                 @media screen and (max-width: 768px) {
                     font-size: 1rem;
                 }
-                font-weight: 200;
+                font-weight: 600;
                 color: #12151a;
                 text-align: center;
 
@@ -60,12 +60,7 @@
             .Hero_Description {
                 font-size: 1.25rem;
                 font-weight: 400;
-                color: #fff;
-
-                @media screen and (max-width: 768px) {
-                    //box shadow on text
-                    text-shadow: 0 0 2px #000;
-                }
+                color: #12151a;
 
                 text-align: center;
                 margin: 0 0 0 0;

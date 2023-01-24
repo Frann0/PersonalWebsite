@@ -18,6 +18,10 @@ function App() {
     { path: '/project/:id', element: <ProjectPage /> }
   ]
 
+  const goTo = (path: string) => () => {
+
+  }
+
   const { mobileStore } = useStore();
 
   return (
@@ -30,8 +34,10 @@ function App() {
               <>
                 {mobileStore.hamburgerOpen &&
                   <div className='Hamburger_Container'>
-                    <div className='Hamburger_Logo'>
-                      <img src={logo} alt='logo' />
+                    <div className='Hamburger_Logo' >
+                      <a href='#hero' onClick={() => { mobileStore.toggleHamburger() }} >
+                        <img src={logo} alt='logo' />
+                      </a>
                     </div>
                     <div className='Hamburger_Close' onClick={() => mobileStore.toggleHamburger()}>
                       <Icon name='cross' />

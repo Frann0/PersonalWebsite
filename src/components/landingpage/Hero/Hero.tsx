@@ -1,16 +1,16 @@
 import React from 'react'
 import './Hero.scss'
-import  logo  from '../../../assets/shared/logo.svg'
+import logo from '../../../assets/shared/logo.svg'
 import scroll from '../../../assets/shared/scroll.svg'
 
 const Hero = () => {
 
   const goTo = (link: string) => {
     return (e: any) => {
-        e.preventDefault()
-        window.location.href = `/#${link}`
+      e.preventDefault()
+      window.location.href = `/#${link}`
     }
-}
+  }
 
   return (
     <div className='Hero_Container' id='hero'>
@@ -29,9 +29,9 @@ const Hero = () => {
           </h2>
           <p className='Hero_Description'>
             I am a <span className='Hero_Highlight'>passionate</span> UI/UX Designer and Frontend Developer
-            
+
           </p>
-          <p className='Hero_Description Hero_Highlight'>
+          <p className='Hero_Description'>
             Let's work together!
           </p>
         </div>
@@ -41,8 +41,9 @@ const Hero = () => {
           </button>
         </div>
 
+
         <div className='Hero_ScrollContainer'>
-          <img src={scroll} alt="" onClick={goTo('about')}/>
+          <img src={scroll} alt="" onClick={goTo('about')} />
         </div>
       </div>
     </div>
