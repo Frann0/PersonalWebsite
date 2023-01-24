@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { projectDTO } from '../../projectpage/Banner/Banner'
 import './Workcard.scss'
 
-const Workcard = (card: Card) => {
+const Workcard = (card: projectDTO) => {
 
     return (
         <Link className='Workcard_CardContainer' to={card.link}>
@@ -19,7 +20,3 @@ const Workcard = (card: Card) => {
 }
 
 export default Workcard
-
-export interface Card {
-    title: string, category: string, link: string
-}
