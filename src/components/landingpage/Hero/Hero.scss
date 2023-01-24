@@ -44,6 +44,10 @@
             }
             .Hero_Title {
                 font-size: 1.25rem;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 1rem;
+                }
                 font-weight: 200;
                 color: #12151a;
                 text-align: center;
@@ -51,6 +55,7 @@
                 margin: 0 0 25px 0;
 
                 padding: 0;
+
             }
             .Hero_Description {
                 font-size: 1.25rem;
@@ -59,7 +64,7 @@
 
                 @media screen and (max-width: 768px) {
                     //box shadow on text
-                    text-shadow: 0 0 10px #000;
+                    text-shadow: 0 0 2px #000;
                 }
 
                 text-align: center;
