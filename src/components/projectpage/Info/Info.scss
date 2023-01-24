@@ -1,0 +1,192 @@
+.Info_Container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 0;
+    .Info_Wrapper {
+        width: 90%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        .Info_ContentContainer {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            max-width: 50%;
+            gap: 20px;
+            .Info_About {
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+
+                .Info_About_Title {
+                    font-size: 2.25rem;
+                    font-weight: 600;
+                    color: #1a1e29;
+                    width: 100%;
+                    text-align: start;
+                    margin: 0;
+                    margin-bottom: 10px;
+                    padding: 0;
+                }
+                .Info_About_Description {
+                    font-size: 0.875rem;
+                    font-weight: 400;
+                    color: #1a1e29;
+                    width: 100%;
+                    text-align: justify;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+
+            .Info_Involement {
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+
+                .Info_Involement_Title {
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    color: #1a1e29;
+                    width: 100%;
+                    text-align: start;
+                    margin-bottom: 10px;
+                    padding: 0;
+                }
+                .Info_Involement_Description {
+                    font-size: 0.875rem;
+                    font-weight: 400;
+                    color: #1a1e29;
+                    width: 100%;
+                    text-align: justify;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+
+            .Info_overallContainer {
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 0;
+                padding: 0;
+                gap: 20px;
+                .Info_Platform {
+                    width: 100%;
+                    height: fit-content;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    margin: 0;
+                    padding: 0;
+                    .Info_Platform_Title {
+                        font-size: 1.25rem;
+                        font-weight: 600;
+                        color: #1a1e29;
+                        width: 100%;
+                        text-align: start;
+                        margin-bottom: 10px;
+                        padding: 0;
+                    }
+                    .Info_Platform_Description {
+                        font-size: 0.875rem;
+                        font-weight: 400;
+                        color: #1a1e29;
+                        width: 100%;
+                        text-align: justify;
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+                .Info_Category {
+                    width: 100%;
+                    height: fit-content;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    margin: 0;
+                    padding: 0;
+                    .Info_Category_Title {
+                        font-size: 1.25rem;
+                        font-weight: 600;
+                        color: #1a1e29;
+                        width: 100%;
+                        text-align: start;
+                        margin-bottom: 10px;
+                        padding: 0;
+                    }
+                    .Info_Category_Description {
+                        font-size: 0.875rem;
+                        font-weight: 400;
+                        color: #1a1e29;
+                        width: 100%;
+                        text-align: justify;
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+            }
+            .Info_Tools {
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+                .Info_Tools_Title {
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    color: #1a1e29;
+                    width: 100%;
+                    text-align: start;
+                    margin-bottom: 10px;
+                    padding: 0;
+                }
+                .Info_Tools_Wrapper {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: start;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    height: fit-content;
+                    gap: 10px;
+                    .Info_Tools_Tool {
+                        font-size: 0.875rem;
+                        font-weight: 400;
+                        color: #1a1e29;
+                        text-align: justify;
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
