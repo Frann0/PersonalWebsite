@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Skills.scss'
 import SkillsPic from '../../../assets/Skills_Pic.png'
 const Skills = () => {
+
+  const [isMobile, setIsMobile] = React.useState(false)
 
   const CreativeWorkTools = [
     'Figma',
@@ -29,13 +31,23 @@ const Skills = () => {
     'Vite'
   ]
 
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+
+    return () => {
+      setIsMobile(false)
+    }
+  }, [window.innerWidth])
+
   return (
     <div className='Skills_Container' id='skills'>
       <div className='Skills_Wrapper'>
         <div className='Skills_ContentContainer'>
-          <div className='Skills_PicContainer'>
-            <img className='Skills_Pic' src={SkillsPic} alt="" />
-          </div>
+          {!isMobile &&
+            <div className='Skills_PicContainer'>
+              <img className='Skills_Pic' src={SkillsPic} alt="" />
+            </div>
+          }
           <div className='Skills_InfoContainer'>
             <div className='Skills_InfoContentContainer'>
               <h1 className='Skills_InfoTitle'>What I use.</h1>
