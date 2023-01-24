@@ -25,7 +25,13 @@
             margin-top: 100px;
             margin-bottom: 50px;
             .Contact_Title {
-                font-size: 3rem;
+                @media screen and (max-width: 768px) {
+                    font-size: 2rem;
+                }
+                @media screen and (min-width: 768) {
+                    font-size: 3rem;
+                }
+
                 font-weight: 600;
                 color: #01c38e;
                 width: 100%;
@@ -48,6 +54,10 @@
                 color: #01c38e !important;
                 font-weight: 600;
                 text-align: center !important;
+
+                @media screen and (max-width: 768px) {
+                    text-decoration: underline;
+                }
             }
 
             .Contact_Lowlight {
