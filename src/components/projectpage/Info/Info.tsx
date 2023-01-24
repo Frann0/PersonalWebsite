@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { projectDTO } from '../Banner/Banner'
 import './Info.scss'
 const Info = (project: projectDTO) => {
-
+    const [isMobile, setIsMobile] = React.useState(false)
     console.log(project);
-    
+
+    useEffect(() => {
+        setIsMobile(window.innerWidth < 768)
+        return () => {
+            setIsMobile(false)
+        }
+    }, [window.innerWidth])
 
     return (
         <div className='Info_Container'>
@@ -37,9 +43,11 @@ const Info = (project: projectDTO) => {
                         </div>
                     </div>
                 </div>
-                <div className='Info_ImageContainer'>
-                    
-                </div>
+                {!isMobile &&
+                    <div className='Info_ImageContainer'>
+
+                    </div>
+                }
             </div>
         </div>
     )
