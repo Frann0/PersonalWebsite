@@ -2,6 +2,12 @@ import { action, makeAutoObservable, observable } from "mobx";
 
 export class ProjectStore {
 
+    test = false;
+
+    setTest = (value: boolean) => {
+        this.test = value;
+    }
+
     projects = [
         {
             title: 'portfolio',
