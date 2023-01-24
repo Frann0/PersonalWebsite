@@ -31,7 +31,7 @@ const Hero = () => {
             I am a <span className='Hero_Highlight'>passionate</span> UI/UX Designer and Frontend Developer
             
           </p>
-          <p className='Hero_Description'>
+          <p className='Hero_Description Hero_Highlight'>
             Let's work together!
           </p>
         </div>
