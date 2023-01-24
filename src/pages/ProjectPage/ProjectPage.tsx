@@ -1,13 +1,16 @@
 import React from 'react'
+import Banner from '../../components/projectpage/Banner/Banner'
+import Carousel from '../../components/projectpage/Carousel/Carousel'
+import Info from '../../components/projectpage/Info/Info'
 import Footer from '../../components/Shared/Footer/Footer'
 import './ProjectPage.scss'
 const ProjectPage = () => {
+
     return (
-
-
-
         <div className='ProjectPage_Container'>
-            <h1 style={{'height': 'calc(100vh + 50px)' }}>Project Page</h1>
+            <Banner />
+            <Info />
+            <Carousel />
             <Footer />
         </div>
     )
