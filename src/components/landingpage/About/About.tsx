@@ -3,6 +3,9 @@ import './About.scss'
 import billede from '../../../assets/billede.png'
 
 const About = () => {
+
+  
+
   return (
     <div className='About_Container' id='about'>
       <div className='About_Wrapper'>
