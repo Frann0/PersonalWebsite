@@ -24,6 +24,7 @@
     text-decoration: none;
     outline: 1px solid #1a1e29;
     transition: all 0.3s ease-in-out;
+    font-family: 'Roboto';
 
     &:hover {
         transform: scale(1.025);
@@ -40,6 +41,7 @@
             width: 100%;
             text-align: start;
             margin: 0;
+            font-family: 'Visuelt Pro';
         }
         .Workcard_CardCategory {
             font-size: 0.75rem;
@@ -48,6 +50,7 @@
             width: 100%;
             text-align: start;
             margin: 0;
+            font-family: 'Roboto';
         }
     }
 }

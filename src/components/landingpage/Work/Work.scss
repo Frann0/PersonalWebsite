@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
 
+    font-family: 'Roboto';
     .Work_Wrapper {
         width: 90%;
         height: fit-content;
@@ -30,6 +31,7 @@
                 text-align: start;
                 margin: 0;
                 margin-bottom: 15px;
+                font-family: 'Visuelt Pro';
             }
             .Work_Description {
                 font-size: 0.875rem;
@@ -38,6 +40,7 @@
                 width: 100%;
                 text-align: justify;
                 margin: 0;
+                font-family: 'Roboto';
             }
         }
         .Work_CardsContainer {
@@ -105,6 +108,7 @@
                 border: none;
                 font-size: 0.75rem;
                 cursor: pointer;
+                font-family: 'Roboto';
             }
         }
     }

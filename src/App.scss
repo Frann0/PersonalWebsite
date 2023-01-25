@@ -1,3 +1,14 @@
+//Import visuelt pro font from assets/shared/fonts
+@font-face {
+  font-family: "Visuelt Pro";
+  src: url("./assets/shared/fonts/VisueltPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+//import roboto from google fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
 .App {
   display: flex;
   flex-direction: column;
@@ -140,13 +151,13 @@ body {
       margin: 0;
       padding: 0;
 
-
       .Hamburger_LinkItem {
         font-size: 1.5rem;
         font-weight: 600;
         color: #fff;
         text-align: center;
         text-decoration: none;
+        font-family: 'Visuelt Pro';
       }
     }
   }
