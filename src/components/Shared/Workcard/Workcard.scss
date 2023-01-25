@@ -14,10 +14,9 @@
         filter: saturate(0) contrast(1.15) brightness(1.05);
     }
     border-radius: 10px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 63.02%, #000000f0 100%), url(../../../assets/hero.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
     display: flex;
     flex-direction: column;
     justify-content: end;

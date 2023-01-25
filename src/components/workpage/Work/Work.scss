@@ -1,6 +1,5 @@
 .WorkComponent_Container {
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,11 +44,14 @@
         .WorkComponent_CardsContainer {
             width: 100%;
             height: fit-content;
+            margin-bottom: 50px;
+
             @media screen and (min-width: 768px) {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 grid-template-rows: repeat(2, 1fr);
                 grid-gap: 10px;
+
                 .Workcard_CardContainer:nth-child(1) {
                     grid-column: 1 / 1;
                     grid-row: 1 / 1;
@@ -82,6 +84,7 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                gap: 10px;
             }
         }
         .Work_ViewAllContainer {

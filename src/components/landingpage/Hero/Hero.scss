@@ -4,7 +4,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background: url(../../../assets/hero6.jpg);
+    background: url(../../../assets/hero.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,7 +34,7 @@
             align-items: center;
 
             .Hero_Name {
-                font-size: 2rem;
+                font-size: 1.85rem;
                 font-weight: 700;
                 color: #12151a;
                 text-align: center;
@@ -48,7 +48,7 @@
                 @media screen and (max-width: 768px) {
                     font-size: 1rem;
                 }
-                font-weight: 600;
+                font-weight: 200;
                 color: #12151a;
                 text-align: center;
 
@@ -59,13 +59,14 @@
 
             }
             .Hero_Description {
-                font-size: 1.25rem;
-                font-weight: 400;
+                font-size: 1rem;
+                font-weight: 200;
                 color: #12151a;
 
                 text-align: center;
                 margin: 0 0 0 0;
                 padding: 0;
+                margin-bottom: 10px;
 
                 &:last-child {
                     margin-bottom: 25px;
@@ -74,7 +75,6 @@
             }
             .Hero_Highlight {
                 color: #01c38c;
-                font-weight: 600;
             }
         }
 

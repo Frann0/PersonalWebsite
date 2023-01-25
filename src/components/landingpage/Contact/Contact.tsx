@@ -1,10 +1,50 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './Contact.scss'
+import emailjs from '@emailjs/browser';
+
 const Contact = () => {
   const [name, setName] = React.useState('')
   const [email, setEmail] = React.useState('')
   const [message, setMessage] = React.useState('')
   const [subject, setSubject] = React.useState('')
+
+  const [nameError, setNameError] = React.useState(false)
+  const [emailError, setEmailError] = React.useState(false)
+  const [messageError, setMessageError] = React.useState(false)
+  const [subjectError, setSubjectError] = React.useState(false)
+
+
+  const form = useRef<HTMLFormElement>({} as HTMLFormElement);
+  const emailRegex = new RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
+
+  const sendEmail = (e: any) => {
+
+    if (name.length === 0 || email.length === 0 || !email.match(emailRegex) || message.length === 0 || subject.length === 0) {
+      setNameError(name.length === 0)
+      setEmailError(email.length === 0 || !email.match(emailRegex))
+      setMessageError(message.length === 0)
+      setSubjectError(subject.length === 0)
+
+      return
+    }
+
+
+
+    e.preventDefault();
+    //clear form
+    setName('')
+    setEmail('')
+    setMessage('')
+    setSubject('')
+
+
+    emailjs.sendForm('service_ue1nt1o', 'template_tjkixlq', form.current, 'ROP0xdoYsl3CxH7_y')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
 
   return (
     <div className='Contact_Container' id='contact'>
@@ -21,27 +61,28 @@ const Contact = () => {
             I am also available for freelance work.
           </p>
         </div>
-        <div className='Contact_FormContainer'>
-          <div className={`Contact_InputContainer ${name.length !== 0 ? 'Contact_Filled' : ''}`}>
-            <input type="text" className={`Contact_Input `} value={name} placeholder='Your name' onChange={(e) => setName(e.target.value)} />
+        <form ref={form} onSubmit={sendEmail} className='Contact_FormContainer'>
+          <div className={`Contact_InputContainer ${name.length !== 0 ? 'Contact_Filled' : ''} ${nameError ? 'Contact_Error' : ''}`}>
+            <input type="text" className={`Contact_Input `} value={name} placeholder='Your name' onChange={(e) => { setName(e.target.value); setNameError(false) }} name='name' />
           </div>
-          <div className={`Contact_InputContainer ${email.length !== 0 ? 'Contact_Filled' : ''}`}>
-            <input type="text" className={`Contact_Input `} value={email} placeholder='Your email' onChange={(e) => setEmail(e.target.value)} />
+          <div className={`Contact_InputContainer ${email.length !== 0 ? 'Contact_Filled' : ''} ${emailError ? 'Contact_Error' : ''}`}>
+            <input type="text" className={`Contact_Input `} value={email} placeholder='Your email' onChange={(e) => { setEmail(e.target.value); setEmailError(false) }} name='email' />
           </div>
-          <div className={`Contact_InputContainer ${subject.length !== 0 ? 'Contact_Filled' : ''}`}>
-            <input type="text" className={`Contact_Input `} value={subject} placeholder='Subject' onChange={(e) => setSubject(e.target.value)} />
+          <div className={`Contact_InputContainer ${subject.length !== 0 ? 'Contact_Filled' : ''} ${subjectError ? 'Contact_Error' : ''}`}>
+            <input type="text" className={`Contact_Input `} value={subject} placeholder='Subject' onChange={(e) => { setSubject(e.target.value); setSubjectError(false) }} name='subject' />
           </div>
-          <div className={`Contact_InputContainer Contact_InputLarge ${message.length !== 0 ? 'Contact_Filled' : ''}`}>
-            <textarea className={`Contact_Textarea `} value={message} placeholder='Your name' onChange={(e) => setMessage(e.target.value)} />
+          <div className={`Contact_InputContainer Contact_InputLarge ${message.length !== 0 ? 'Contact_Filled' : ''} ${messageError ? 'Contact_Error' : ''}`}>
+            <textarea className={`Contact_Textarea `} value={message} placeholder='Message' onChange={(e) => { setMessage(e.target.value); setMessageError(false) }} name='message' />
           </div>
-        </div>
+        </form>
+
         <div className='Contact_SendContainer'>
-          <button className='Contact_SendButton'>
+          <button className='Contact_SendButton' onClick={sendEmail} >
             Send Message
           </button>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 

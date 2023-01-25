@@ -6,7 +6,9 @@ import './Workcard.scss'
 const Workcard = (card: projectDTO) => {
 
     return (
-        <Link className='Workcard_CardContainer' to={card.link}>
+        <Link className='Workcard_CardContainer' style={{
+            background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 63.02%, #000000f0 100%), url(${card.image})`
+        }} to={card.link}>
             <div className='Workcard_Card'>
                 <h1 className='Workcard_CardTitle'>
                     {card.title}

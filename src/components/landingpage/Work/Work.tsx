@@ -22,7 +22,7 @@ const Work = () => {
           </p>
         </div>
         <div className='Work_CardsContainer'>
-          {projectStore.projects.map((card, index) => (
+          {projectStore.projects.slice(0,6).map((card, index) => (
             <Workcard {...card} key={index} />
           ))}
 
