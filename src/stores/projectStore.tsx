@@ -1,4 +1,5 @@
 import { action, makeAutoObservable, observable } from "mobx";
+import { projectDTO, ProjectResourceButtonClasses } from "../models/projects/projectInterfaces";
 
 export class ProjectStore {
 
@@ -8,7 +9,7 @@ export class ProjectStore {
         this.test = value;
     }
 
-    projects = [
+    projects: projectDTO[] = [
         {
             title: 'portfolio',
             category: 'web design',
@@ -17,13 +18,33 @@ export class ProjectStore {
             info: {
                 about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nunc nisl ultricies nisl, nec ultricies nisl nunc vel nisl. Sed euismod, nisl vel ultricies lacinia, nunc nisl ultricies nisl, nec ultricies nisl nunc vel nisl.',
                 involement: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nunc nisl ultricies nisl, nec ultricies nisl nunc vel nisl. Sed euismod, nisl vel ultricies lacinia, nunc nisl ultricies nisl, nec ultricies nisl nunc vel nisl.',
-                platform: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nunc nisl ultricies nisl, nec ultricies nisl nunc vel nisl. Sed euismod, nisl vel ultricies lacinia, nunc nisl ultricies nisl, nec ultricies nisl nunc vel nisl.',
+                platform: 'Web',
                 tools: ['React', 'Typescript', 'Sass', 'Figma']
             },
 
             carouselImages: [
                 'https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80',
                 'https://images.unsplash.com/photo-1661961110671-77b71b929d52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+            ],
+            resources: [
+                {
+                    iconName: 'figma',
+                    title: 'Figma',
+                    link: 'https://google.com',
+                    buttonClass: ProjectResourceButtonClasses.FIGMA
+                },
+                {
+                    iconName: 'github_white',
+                    title: 'Github',
+                    link: 'https://google.com',
+                    buttonClass: ProjectResourceButtonClasses.GITHUB
+                },
+                {
+                    iconName: 'website',
+                    title: 'Website',
+                    link: 'https://google.com',
+                    buttonClass: ProjectResourceButtonClasses.WEBSITE
+                }
             ]
         },
 

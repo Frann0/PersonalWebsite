@@ -9,7 +9,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 70px 0;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     .Info_Wrapper {
         width: 90%;
         height: fit-content;
@@ -52,7 +52,7 @@
                     margin: 0;
                     margin-bottom: 10px;
                     padding: 0;
-                    font-family: 'Visuelt Pro';
+                    font-family: "Visuelt Pro";
                 }
                 .Info_About_Description {
                     font-size: 0.875rem;
@@ -62,7 +62,7 @@
                     text-align: justify;
                     margin: 0;
                     padding: 0;
-                    font-family: 'Roboto';
+                    font-family: "Roboto";
                 }
             }
 
@@ -84,7 +84,7 @@
                     text-align: start;
                     margin-bottom: 10px;
                     padding: 0;
-                    font-family: 'Visuelt Pro';
+                    font-family: "Visuelt Pro";
                 }
                 .Info_Involement_Description {
                     font-size: 0.875rem;
@@ -94,7 +94,7 @@
                     text-align: justify;
                     margin: 0;
                     padding: 0;
-                    font-family: 'Roboto';
+                    font-family: "Roboto";
                 }
             }
 
@@ -124,7 +124,7 @@
                         text-align: start;
                         margin-bottom: 10px;
                         padding: 0;
-                        font-family: 'Visuelt Pro';
+                        font-family: "Visuelt Pro";
                     }
                     .Info_Platform_Description {
                         font-size: 0.875rem;
@@ -134,7 +134,7 @@
                         text-align: justify;
                         margin: 0;
                         padding: 0;
-                        font-family: 'Roboto';
+                        font-family: "Roboto";
                     }
                 }
                 .Info_Category {
@@ -154,7 +154,7 @@
                         text-align: start;
                         margin-bottom: 10px;
                         padding: 0;
-                        font-family: 'Visuelt Pro';
+                        font-family: "Visuelt Pro";
                     }
                     .Info_Category_Description {
                         font-size: 0.875rem;
@@ -164,46 +164,85 @@
                         text-align: justify;
                         margin: 0;
                         padding: 0;
-                        font-family: 'Roboto';
+                        font-family: "Roboto";
                     }
                 }
-            }
-            .Info_Tools {
-                width: 100%;
-                height: fit-content;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: center;
-                margin: 0;
-                padding: 0;
-                .Info_Tools_Title {
-                    font-size: 1.25rem;
-                    font-weight: 600;
-                    color: #1a1e29;
-                    width: 100%;
-                    text-align: start;
-                    margin-bottom: 10px;
-                    padding: 0;
-                    font-family: 'Visuelt Pro';
-                }
-                .Info_Tools_Wrapper {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: start;
-                    flex-wrap: wrap;
+                .Info_Tools {
                     width: 100%;
                     height: fit-content;
-                    gap: 10px;
-                    .Info_Tools_Tool {
-                        font-size: 0.875rem;
-                        font-weight: 400;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    margin: 0;
+                    padding: 0;
+                    .Info_Tools_Title {
+                        font-size: 1.25rem;
+                        font-weight: 600;
                         color: #1a1e29;
-                        text-align: justify;
-                        margin: 0;
+                        width: 100%;
+                        text-align: start;
+                        margin-bottom: 10px;
                         padding: 0;
-                        font-family: 'Roboto';
+                        font-family: "Visuelt Pro";
+                    }
+                    .Info_Tools_Wrapper {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: start;
+                        flex-wrap: wrap;
+                        width: 100%;
+                        height: fit-content;
+                        gap: 10px;
+                        .Info_Tools_Tool {
+                            font-size: 0.875rem;
+                            font-weight: 400;
+                            color: #1a1e29;
+                            text-align: justify;
+                            margin: 0;
+                            padding: 0;
+                            font-family: "Roboto";
+                        }
+                    }
+                }
+                .Info_Resources {
+                    width: 100%;
+                    height: fit-content;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    margin: 0;
+                    padding: 0;
+                    .Info_Resources_Title {
+                        font-size: 1.25rem;
+                        font-weight: 600;
+                        color: #1a1e29;
+                        width: 100%;
+                        text-align: start;
+                        margin-bottom: 10px;
+                        padding: 0;
+                        font-family: "Visuelt Pro";
+                    }
+                    .Info_Resources_Wrapper {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: start;
+                        flex-wrap: wrap;
+                        width: 100%;
+                        height: fit-content;
+                        gap: 10px;
+                        .Info_Resources_Tool {
+                            font-size: 0.875rem;
+                            font-weight: 400;
+                            color: #1a1e29;
+                            text-align: justify;
+                            margin: 0;
+                            padding: 0;
+                            font-family: "Roboto";
+                        }
                     }
                 }
             }

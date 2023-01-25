@@ -7,7 +7,7 @@ const Icon = (props: any) => {
     }
 
     return (
-        <img src={getImage()} width={props.width} height={props.height} />
+        <img src={getImage()} width={props.width ?? 24} height={props.height ?? 24} />
     )
 }
 

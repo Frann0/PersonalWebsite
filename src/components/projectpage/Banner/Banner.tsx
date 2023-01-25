@@ -1,4 +1,5 @@
 import React from 'react'
+import { projectDTO } from '../../../models/projects/projectInterfaces';
 import './Banner.scss'
 const Banner = (project: projectDTO) => {
 
@@ -17,17 +18,3 @@ const Banner = (project: projectDTO) => {
 
 export default Banner
 
-export interface projectDTO {
-    title: string,
-    category: string,
-    image: string,
-    link: string,
-    info: {
-        about: string,
-        involement: string,
-        platform: string,
-        tools: string[],
-    }
-    carouselImages: string[]
-
-}
