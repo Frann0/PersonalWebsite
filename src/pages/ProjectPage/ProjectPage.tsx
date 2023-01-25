@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import Banner, { projectDTO } from '../../components/projectpage/Banner/Banner'
+import Banner from '../../components/projectpage/Banner/Banner'
 import Carousel from '../../components/projectpage/Carousel/Carousel'
 import Info from '../../components/projectpage/Info/Info'
 import Footer from '../../components/Shared/Footer/Footer'
+import { projectDTO } from '../../models/projects/projectInterfaces'
 import { useStore } from '../../stores/store'
 import './ProjectPage.scss'
 const ProjectPage = () => {

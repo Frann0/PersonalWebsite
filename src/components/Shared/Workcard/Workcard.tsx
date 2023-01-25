@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { projectDTO } from '../../projectpage/Banner/Banner'
+import { projectDTO } from '../../../models/projects/projectInterfaces'
 import './Workcard.scss'
 
 const Workcard = (card: projectDTO) => {

@@ -1,6 +1,6 @@
 import React from 'react'
+import { projectDTO } from '../../../models/projects/projectInterfaces'
 import Icon from '../../Shared/icon/Icon'
-import { projectDTO } from '../Banner/Banner'
 import './Carousel.scss'
 
 const Carousel = (project: projectDTO) => {
