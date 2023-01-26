@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { projectDTO } from '../../../models/projects/projectInterfaces'
 import Icon from '../../Shared/icon/Icon'
 import './Carousel.scss'
 
 const Carousel = (project: projectDTO) => {
+    const [isMobile, setIsMobile] = React.useState(false)
 
     const [currentImage, setCurrentImage] = React.useState(0)
     const handleRight = () => {
@@ -23,19 +24,23 @@ const Carousel = (project: projectDTO) => {
         }
     }
 
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768)
+        }
+        window.addEventListener('resize', handleResize)
+        handleResize()
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
 
 
     return (
-        <div className='Carousel_Container' style={{ 'backgroundImage': `linear-gradient(180deg, rgba(0, 0, 0, 0) 63.02%, #000000f0 100%),url(${project.carouselImages[currentImage]})` }}>
-            <div className='Carousel_Wrapper'>
-                <div className='Carousel_Button' onClick={handleLeft}>
-                    <Icon name='chevron_left' width={120} height={160} />
-                </div>
-
-                <div className='Carousel_Button' onClick={handleRight}>
-                    <Icon name='chevron_right' width={120} height={160} />
-                </div>
-            </div>
+        <div className='Carousel_Container'>
+            {project.carouselImages.map((image, index) => {
+                return (
+                    <img src={image} alt="" />
+                )
+            })}
         </div>
     )
 }

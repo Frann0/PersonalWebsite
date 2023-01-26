@@ -1,15 +1,15 @@
 .Carousel_Container {
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 70px 0;
-    max-height: 1080px;
+
+    img{
+        width: 100%;
+        object-fit: contain;
+    }
+
     .Carousel_Wrapper {
         width: 90%;
         height: 100%;
