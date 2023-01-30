@@ -23,8 +23,7 @@ export class ProjectStore {
             },
 
             carouselImages: [
-                'https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80',
-                'https://images.unsplash.com/photo-1661961110671-77b71b929d52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+
             ],
             resources: [
                 {
@@ -60,8 +59,10 @@ export class ProjectStore {
             },
 
             carouselImages: [
-                'https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80',
-                'https://images.unsplash.com/photo-1661961110671-77b71b929d52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+                'https://i.imgur.com/APtQRWc.png',
+                'https://i.imgur.com/b098hiG.png',
+                'https://i.imgur.com/79uz75r.png',
+                'https://i.imgur.com/HnynTcp.png'
             ],
             resources: [
                 {
@@ -91,8 +92,13 @@ export class ProjectStore {
             },
 
             carouselImages: [
-                'https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80',
-                'https://images.unsplash.com/photo-1661961110671-77b71b929d52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+                'https://i.imgur.com/7WgPwQ6.png',
+                'https://i.imgur.com/eUYIPOr.png',
+                'https://i.imgur.com/9d2ubXk.png',
+                'https://i.imgur.com/i33lrfp.png',
+                'https://i.imgur.com/zV7EedT.png',
+                'https://i.imgur.com/AqROXvc.png',
+                'https://i.imgur.com/mPClG5P.png',
             ],
             resources: [
                 {
@@ -122,8 +128,10 @@ export class ProjectStore {
             },
 
             carouselImages: [
-                'https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80',
-                'https://images.unsplash.com/photo-1661961110671-77b71b929d52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+                'https://i.imgur.com/aa9fx4E.png',
+                'https://i.imgur.com/dwHmGlj.png',
+                'https://i.imgur.com/hQiud6Y.png',
+                'https://i.imgur.com/lz6qja1.png'
             ],
             resources: [
                 {
@@ -154,8 +162,7 @@ export class ProjectStore {
             },
 
             carouselImages: [
-                'https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80',
-                'https://images.unsplash.com/photo-1661961110671-77b71b929d52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+                'https://i.imgur.com/9GMhT5l.jpg',
             ],
             resources: [
                 {
@@ -182,7 +189,7 @@ export class ProjectStore {
             title: 'Weblager',
             category: 'Web application',
             link: '/project/5',
-            image: 'https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80',
+            image: 'https://i.imgur.com/BF7wJPz.png',
             info: {
                 about: 'Weblager was a project i worked on during my time at Danskscanning A/S from nov 2021 - nov 2022. Weblager is a platform where the partnered municipalities can find earlier building cases for plots of land in Denmark. And is usually used by construction workers and such to look at earlier work. This solves the problem of having the old physical files digitalized and available on an online platform, so it wouldn\'t take ages to look for the physical file.',
                 involement: 'During my time at Danskscanning, I was tasked with redesigning the old interface to a more stialized and mordernized look for the 21 century. where I as well as some other guys on the team went through 2 or 3 itterations of designs before landing on what it is today. After we got the go ahead on the design, we then began work on getting it implemented by rewriting all the css and typescript to handle everything new we had planned for.',
@@ -191,8 +198,8 @@ export class ProjectStore {
             },
 
             carouselImages: [
-                'https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80',
-                'https://images.unsplash.com/photo-1661961110671-77b71b929d52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+                'https://miro.medium.com/max/4800/1*HhzXu5T8d3n8mM_V4RixKg.webp',
+                'https://miro.medium.com/max/4800/1*gpLGGtOOviVCy9-NRQQOIw.webp',
             ],
             resources: [
                 {
