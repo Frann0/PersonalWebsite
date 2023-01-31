@@ -21,23 +21,39 @@ function App() {
     { path: '/project/:id', element: <ProjectPage /> },
     { path: '*', element: <NotFoundPage /> }
   ]
+  const { mobileStore, loaderStore } = useStore();
 
-  const [doneLoading, setDoneLoading] = useState(false);
+  const [doneLoading, setDoneLoading] = useState<boolean>();
 
   const goTo = (path: string) => () => {
 
+    let currentPath = window.location.pathname;
+    console.log(currentPath);
+    console.log(path);
+
+    if (currentPath !== '/') {
+      loaderStore.startLoading()
+
+      setTimeout(() => {
+        window.location.href = `/#${path}`
+        loaderStore.stopLoading()
+      }, 2000)
+    }
+    else {
+
+      window.location.href = `/#${path}`
+    }
+    mobileStore.toggleHamburger();
+
   }
 
-  const { mobileStore, loaderStore } = useStore();
 
   useEffect(() => {
-    if (doneLoading === false) {
       loaderStore.startLoading();
       setTimeout(() => {
         setDoneLoading(true);
         loaderStore.stopLoading();
       }, 2000)
-    }
 
   }, [])
 
@@ -64,17 +80,17 @@ function App() {
                           <Icon name='cross' />
                         </div>
                         <ul className='Hamburger_LinksWrapper'>
-                          <li className='Hamburger_Link'>
-                            <a className='Hamburger_LinkItem' onClick={mobileStore.toggleHamburger} href='#about'>About</a>
+                          <li className='Hamburger_Link' >
+                            <a className='Hamburger_LinkItem' onClick={goTo('about')} >About</a>
                           </li>
                           <li className='Hamburger_Link'>
-                            <a className='Hamburger_LinkItem' onClick={mobileStore.toggleHamburger} href='#skills'>Skills</a>
+                            <a className='Hamburger_LinkItem' onClick={goTo('skills')}>Skills</a>
                           </li>
                           <li className='Hamburger_Link'>
-                            <a className='Hamburger_LinkItem' onClick={mobileStore.toggleHamburger} href='#work'>Work</a>
+                            <a className='Hamburger_LinkItem' onClick={goTo('work')}>Work</a>
                           </li>
                           <li className='Hamburger_Link'>
-                            <a className='Hamburger_LinkItem' onClick={mobileStore.toggleHamburger} href='#contact'>Contact</a>
+                            <a className='Hamburger_LinkItem' onClick={goTo('contact')}>Contact</a>
                           </li>
                         </ul>
                         <Footer />
