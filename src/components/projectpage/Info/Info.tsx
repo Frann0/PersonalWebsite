@@ -4,8 +4,6 @@ import Buttons from '../../Shared/Buttons/Buttons';
 import './Info.scss'
 const Info = (project: projectDTO) => {
     const [isMobile, setIsMobile] = React.useState(false)
-    console.log(project);
-
     useEffect(() => {
         setIsMobile(window.innerWidth < 768)
         return () => {

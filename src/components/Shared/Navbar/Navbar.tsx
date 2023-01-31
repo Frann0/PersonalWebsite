@@ -37,7 +37,6 @@ const Navbar = () => {
 
     useEffect(() => {
         setIsMobile(window.innerWidth < 768);
-        console.log('asdasdasd');
 
 
         return () => {

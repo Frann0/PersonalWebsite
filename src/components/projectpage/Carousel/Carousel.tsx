@@ -6,24 +6,6 @@ import './Carousel.scss'
 const Carousel = (project: projectDTO) => {
     const [isMobile, setIsMobile] = React.useState(false)
 
-    const [currentImage, setCurrentImage] = React.useState(0)
-    const handleRight = () => {
-
-        if (currentImage < project.carouselImages.length - 1) {
-            setCurrentImage(currentImage + 1)
-        } else {
-            setCurrentImage(0)
-        }
-    }
-
-    const handleLeft = () => {
-        if (currentImage > 0) {
-            setCurrentImage(currentImage - 1)
-        } else {
-            setCurrentImage(project.carouselImages.length - 1)
-        }
-    }
-
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth < 768)
@@ -38,7 +20,7 @@ const Carousel = (project: projectDTO) => {
         <div className='Carousel_Container'>
             {project.carouselImages.map((image, index) => {
                 return (
-                    <img src={image} alt="" />
+                    <img src={image} alt="" key={index} />
                 )
             })}
         </div>

@@ -9,9 +9,6 @@ import Contact from '../../components/landingpage/Contact/Contact';
 import Footer from '../../components/Shared/Footer/Footer';
 import { useStore } from '../../stores/store';
 const LandingPage = () => {
-  const {projectStore} = useStore();
-  console.log(projectStore.projects);
-  
   return (
     <div className='LandingPage_Container'>
       <Hero />

@@ -23,7 +23,8 @@ export class ProjectStore {
             },
 
             carouselImages: [
-
+                'https://i.imgur.com/WVnLTNn.png',
+                'https://i.imgur.com/GxIf4Pl.png',
             ],
             resources: [
                 {
@@ -68,13 +69,13 @@ export class ProjectStore {
                 {
                     iconName: 'figma',
                     title: 'Figma',
-                    link: 'https://www.figma.com/file/w0weJhRHHyWhUCR8JN3aaK/Portfolio-Design?t=zXQUdMC5114LzsAF-1',
+                    link: 'https://www.figma.com/file/nkz0mCvi0vAor2gVb3UClB/cAppsule?t=VoY32a5ObnaaBRzO-1',
                     buttonClass: ProjectResourceButtonClasses.FIGMA
                 },
                 {
                     iconName: 'github_white',
                     title: 'Github',
-                    link: 'https://github.com/Frann0/PersonalWebsite',
+                    link: 'https://github.com/De4aber/cAppsule_Frontend',
                     buttonClass: ProjectResourceButtonClasses.GITHUB
                 }
             ]
@@ -104,7 +105,7 @@ export class ProjectStore {
                 {
                     iconName: 'figma',
                     title: 'Figma',
-                    link: 'https://www.figma.com/file/w0weJhRHHyWhUCR8JN3aaK/Portfolio-Design?t=zXQUdMC5114LzsAF-1',
+                    link: 'https://www.figma.com/file/DDxObWJ04ewqojwXSmk2HF/rival4z-pages?t=VoY32a5ObnaaBRzO-1',
                     buttonClass: ProjectResourceButtonClasses.FIGMA
                 },
                 {
@@ -137,13 +138,13 @@ export class ProjectStore {
                 {
                     iconName: 'figma',
                     title: 'Figma',
-                    link: 'https://www.figma.com/file/w0weJhRHHyWhUCR8JN3aaK/Portfolio-Design?t=zXQUdMC5114LzsAF-1',
+                    link: 'https://www.figma.com/file/jFJkd5RztHXZmkKQwNPsmH/EmilseBilseBingo-Reimagined?t=VoY32a5ObnaaBRzO-1',
                     buttonClass: ProjectResourceButtonClasses.FIGMA
                 },
                 {
                     iconName: 'github_white',
                     title: 'Github',
-                    link: 'https://github.com/Frann0/PersonalWebsite',
+                    link: 'https://github.com/Loopie-games/EmilseBilseFrontend',
                     buttonClass: ProjectResourceButtonClasses.GITHUB
                 }
             ]
@@ -168,14 +169,8 @@ export class ProjectStore {
                 {
                     iconName: 'figma',
                     title: 'Figma',
-                    link: 'https://www.figma.com/file/w0weJhRHHyWhUCR8JN3aaK/Portfolio-Design?t=zXQUdMC5114LzsAF-1',
+                    link: 'https://www.figma.com/file/IQJa5PxYOFjFKELkl6PtnG/Apollyon?t=VoY32a5ObnaaBRzO-1',
                     buttonClass: ProjectResourceButtonClasses.FIGMA
-                },
-                {
-                    iconName: 'github_white',
-                    title: 'Github',
-                    link: 'https://github.com/Frann0/PersonalWebsite',
-                    buttonClass: ProjectResourceButtonClasses.GITHUB
                 },
                 {
                     iconName: 'website',

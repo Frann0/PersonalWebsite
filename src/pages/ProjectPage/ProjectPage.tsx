@@ -12,10 +12,6 @@ const ProjectPage = () => {
     const params = useParams();
     const [project, setProject] = React.useState<projectDTO>(projectStore.projects[parseInt(params.id!)]);
 
-    console.log(params.id);
-    console.log(projectStore.projects[0]);
-
-
 
     return (
         <div className='ProjectPage_Container'>

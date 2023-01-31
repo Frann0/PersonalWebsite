@@ -40,9 +40,7 @@ const Contact = () => {
 
     emailjs.sendForm('service_ue1nt1o', 'template_tjkixlq', form.current, 'ROP0xdoYsl3CxH7_y')
       .then((result) => {
-        console.log(result.text);
       }, (error) => {
-        console.log(error.text);
       });
   };
 
