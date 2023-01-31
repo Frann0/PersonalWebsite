@@ -6,7 +6,7 @@ import Icon from '../../Shared/icon/Icon'
 const About = () => {
 
   const handleDownloadCV = () => {
-    window.open('https://drive.google.com/u/0/uc?id=11TFH6USYTTstEGmTTjHEBWU934-SZlyJ&export=download', '_blank')
+    window.open('https://drive.google.com/u/0/uc?id=1NcyY9cBJALA_1wToQ53PXZhLUhGHh6AG&export=download', '_blank')
   }
 
   return (

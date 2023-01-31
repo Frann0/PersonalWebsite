@@ -27,7 +27,7 @@ const Skills = () => {
     'Git',
     'Sass',
     'NPM',
-    'Webpack',
+    'Angular',
     'Vite'
   ]
 

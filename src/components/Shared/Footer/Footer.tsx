@@ -12,11 +12,11 @@ const Footer = () => {
   const socials = [
     {
       name: 'github',
-      link: '',
+      link: 'https://github.com/frann0',
     },
     {
       name: 'linkedin',
-      link: '',
+      link: 'https://linkedin.com/in/mikehovedskov',
     },
     {
       name: 'codepen',
@@ -28,6 +28,14 @@ const Footer = () => {
     },
   ]
 
+  const goto = (link: string) => {
+    return (e: any) => {
+      e.preventDefault()
+      window.open(link, '_blank')
+    }
+  }
+
+
   return (
     <div className='Footer_Container'>
       <div className='Footer_Wrapper'>
@@ -38,9 +46,9 @@ const Footer = () => {
         </div>
         <div className='Footer_Socials'>
           {socials.map((social, index) => (
-            <Link to={social.link} key={index} target='_blank' rel='noreferrer'>
+            <div onClick={goto(social.link)} key={index}>
               <Icon name={social.name} width={20} height={20} key={index} />
-            </Link>
+            </div>
           ))}
         </div>
       </div>
