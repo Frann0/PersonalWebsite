@@ -71,6 +71,49 @@
                         font-family: "Roboto";
                     }
                 }
+                .About_CVContainer {
+                    width: 100%;
+                    height: fit-content;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0;
+                    padding: 0;
+                    margin-top: 50px;
+
+                    .About_CV {
+                        width: 200px;
+                        height: 40px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0;
+                        padding: 0;
+                        background: #1a1e29;
+                        cursor: pointer;
+                        outline: none;
+                        border: none;
+                        border-radius: 5px;
+
+                        .About_CVDiv {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 10px;
+                            height: 100%;
+                            width: 100%;
+                            margin: 0;
+                            color: white;
+                            font-size: 0.875rem;
+                            font-family: "Roboto";
+                            img {
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
             }
             .About_picContainer {
                 flex: 1;

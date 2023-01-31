@@ -1,10 +1,13 @@
 import React from 'react'
 import './About.scss'
 import billede from '../../../assets/billede.png'
+import Icon from '../../Shared/icon/Icon'
 
 const About = () => {
 
-  
+  const handleDownloadCV = () => {
+    window.open('https://drive.google.com/u/0/uc?id=11TFH6USYTTstEGmTTjHEBWU934-SZlyJ&export=download', '_blank')
+  }
 
   return (
     <div className='About_Container' id='about'>
@@ -28,7 +31,14 @@ const About = () => {
                 When starting a new project, it is important to gather as much relevant information as possible. This includes understanding the customer's goals, demographics, preferences, and visual inspirations. Researching the industry and competitors is also essential, as it provides context for the project and helps to identify areas of opportunity. After gathering the necessary information, I typically conceptualize the application's layout and create a prototype in a design application such as Figma or Adobe XD. Then, I move on to visual design, using tools such as Photoshop and Figma. Finally, I utilize HTML, CSS, and JavaScript to translate the design into code, while maintaining best practices with whatever framework is used.
               </p>
             </div>
-
+            <div className='About_CVContainer'>
+              <button className='About_CV' onClick={handleDownloadCV}>
+                <div className='About_CVDiv'>
+                  <Icon name='download' />
+                  Download CV
+                </div>
+              </button>
+            </div>
           </div>
           {/**
             * RIGHT SIDE
