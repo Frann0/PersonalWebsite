@@ -10,12 +10,14 @@ import { useStore } from './stores/store';
 import logo from './assets/shared/logo_green.svg';
 import Icon from './components/Shared/icon/Icon';
 import { useEffect } from 'react';
+import NotFoundPage from './pages/404Page/NotFoundPage';
 
 function App() {
   const routes = [
     { path: '/', element: <LandingPage /> },
     { path: '/work', element: <WorkPage /> },
-    { path: '/project/:id', element: <ProjectPage /> }
+    { path: '/project/:id', element: <ProjectPage /> },
+    { path: '*', element: <NotFoundPage /> }
   ]
 
   const goTo = (path: string) => () => {
@@ -32,7 +34,8 @@ function App() {
           {routes.map((route, index) => (
             <Route key={index} path={route.path} element={
               <>
-                {mobileStore.hamburgerOpen &&
+                {
+                  mobileStore.hamburgerOpen &&
                   <div className='Hamburger_Container'>
                     <div className='Hamburger_Logo' >
                       <a href='#hero' onClick={() => { mobileStore.toggleHamburger() }} >
@@ -59,10 +62,11 @@ function App() {
                     <Footer />
                   </div>
                 }
-                <Navbar />
+                < Navbar />
                 <div className='Route_Container'>
                   {route.element}
                 </div>
+
               </>
             } />
           ))}
