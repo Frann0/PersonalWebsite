@@ -7,7 +7,7 @@ import { useStore } from '../../../stores/store'
 const Navbar = () => {
     const [isMobile, setIsMobile] = React.useState(false)
     const [isHamburgerOpen, setIsHamburgerOpen] = React.useState(false)
-    const {mobileStore } = useStore();
+    const { mobileStore, loaderStore } = useStore();
 
     const links = [
         {
@@ -29,9 +29,22 @@ const Navbar = () => {
     ]
 
     const goTo = (link: string) => {
+
+
         return (e: any) => {
             e.preventDefault()
-            window.location.href = `/#${link}`
+            let currentPath = window.location.pathname;
+            if (currentPath !== '/') {
+                loaderStore.startLoading()
+
+                setTimeout(() => {
+                    window.location.href = `/#${link}`
+                    loaderStore.stopLoading()
+                }, 2000)
+            }
+            else {
+                window.location.href = `/#${link}`
+            }
         }
     }
 

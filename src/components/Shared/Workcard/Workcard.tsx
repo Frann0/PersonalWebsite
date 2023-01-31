@@ -1,14 +1,28 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { projectDTO } from '../../../models/projects/projectInterfaces'
+import { useStore } from '../../../stores/store'
 import './Workcard.scss'
 
 const Workcard = (card: projectDTO) => {
 
+    const { loaderStore } = useStore();
+    const navigate = useNavigate();
+
+    const goto = () => {
+        loaderStore.startLoading()
+        setTimeout(() => {
+            navigate(`${card.link}`)
+            loaderStore.stopLoading()
+        }, 2000)
+
+    }
+
+
     return (
-        <Link className='Workcard_CardContainer' style={{
+        <div className='Workcard_CardContainer' style={{
             background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 63.02%, #000000f0 100%), url(${card.image})`
-        }} to={card.link}>
+        }} onClick={goto}>
             <div className='Workcard_Card'>
                 <h1 className='Workcard_CardTitle'>
                     {card.title}
@@ -17,7 +31,7 @@ const Workcard = (card: projectDTO) => {
                     {card.category}
                 </p>
             </div>
-        </Link>
+        </div>
     )
 }
 

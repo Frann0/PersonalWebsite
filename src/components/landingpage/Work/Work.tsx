@@ -5,9 +5,14 @@ import Workcard from '../../Shared/Workcard/Workcard'
 import './Work.scss'
 const Work = () => {
   const navigate = useNavigate()
+  const { loaderStore } = useStore();
 
   const goTo = (path: string) => () => {
-    navigate(path)
+    loaderStore.startLoading()
+    setTimeout(() => {
+      navigate(path)
+      loaderStore.stopLoading()
+    }, 2000)
   }
 
   const { projectStore } = useStore();
@@ -22,7 +27,7 @@ const Work = () => {
           </p>
         </div>
         <div className='Work_CardsContainer'>
-          {projectStore.projects.slice(0,6).map((card, index) => (
+          {projectStore.projects.slice(0, 6).map((card, index) => (
             <Workcard {...card} key={index} />
           ))}
 
