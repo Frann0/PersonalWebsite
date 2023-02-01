@@ -1,0 +1,138 @@
+.NotFound_Container {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fefefe;
+    .NotFound_Wrapper {
+        width: 90%;
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+        margin: 0;
+        padding: 0;
+
+        .NotFound_LeftSide {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            .NotFound_ContentContainer {
+                width: 100%;
+                max-width: 565px;
+                height: fit-content;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+                gap: 1.25rem;
+                .NotFound_Title {
+                    font-family: "visuelt pro";
+                    font-size: 6.25rem;
+                    font-weight: 600;
+                    color: #1a1e29;
+                    width: 100%;
+                    text-align: start;
+                    margin: 0;
+                    padding: 0;
+                    letter-spacing: 0.45em;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 3.125rem;
+                        text-align: center;
+                    }
+                }
+
+                .NotFound_Subtitle {
+                    font-family: "roboto";
+                    font-size: 2.25rem;
+                    font-weight: 400;
+                    color: #1a1e29;
+                    width: 100%;
+                    text-align: start;
+                    margin: 0;
+                    padding: 0;
+                    @media screen and (max-width: 768px) {
+                        text-align: center;
+                    }
+                }
+                .NotFound_Description {
+                    font-family: "roboto";
+                    font-size: 1.25rem;
+                    font-weight: 400;
+                    color: #1a1e29;
+                    width: 100%;
+                    text-align: start;
+                    margin: 0;
+                    padding: 0;
+                    @media screen and (max-width: 768px) {
+                        text-align: center;
+                    }
+                }
+                .NotFound_HomeContainer {
+                    width: 100%;
+                    height: fit-content;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .NotFound_HomeButton {
+                        border-radius: 5px;
+                        width: 100px;
+                        height: 40px;
+                        background: #1a1e29;
+                        color: white;
+                        outline: none;
+                        border: none;
+                        cursor: pointer;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            scale: 1.05;
+                        }
+                    }
+                }
+            }
+        }
+
+        .NotFound_RightSide {
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+
+            .NotFound_ImageContainer {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+
+                .NotFound_Image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
