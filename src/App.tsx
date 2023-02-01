@@ -41,7 +41,7 @@ function App() {
     }
     else {
 
-      window.location.href = `/#${path}`
+      window.location.hash = `${path}`
     }
     mobileStore.toggleHamburger();
 
