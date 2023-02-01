@@ -49,11 +49,18 @@ function App() {
 
 
   useEffect(() => {
+    console.log(loaderStore.frontPageLoaded);
+    
+    if (!loaderStore.frontPageLoaded) {
       loaderStore.startLoading();
       setTimeout(() => {
         setDoneLoading(true);
+        loaderStore.setFrontpageLoaded(true)
         loaderStore.stopLoading();
       }, 2000)
+    } else {
+      setDoneLoading(true);
+    }
 
   }, [])
 

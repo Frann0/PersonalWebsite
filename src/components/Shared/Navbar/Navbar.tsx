@@ -3,6 +3,7 @@ import './Navbar.scss'
 import logo from '../../../assets/shared/logo.svg'
 import Icon from '../icon/Icon'
 import { useStore } from '../../../stores/store'
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -10,6 +11,7 @@ const Navbar = () => {
     const [isMobile, setIsMobile] = React.useState(false)
     const [isHamburgerOpen, setIsHamburgerOpen] = React.useState(false)
     const { mobileStore, loaderStore } = useStore();
+    const navigate = useNavigate();
 
     const links = [
         {
@@ -44,7 +46,7 @@ const Navbar = () => {
                 loaderStore.startLoading()
 
                 setTimeout(() => {
-                    window.location.href = `/#${link}`
+                    navigate(`/#${link}`)
                     loaderStore.stopLoading()
                 }, 2000)
             }

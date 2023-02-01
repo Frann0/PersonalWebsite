@@ -3,6 +3,7 @@ import { action, makeAutoObservable, observable } from "mobx";
 export class LoaderStore {
 
     loadingState = LoadingState.stopped;
+    frontPageLoaded = false;
 
     startLoading = () => {
         console.log('startLoading');
@@ -29,6 +30,10 @@ export class LoaderStore {
 
     resetLoading = () => {
         this.loadingState = LoadingState.stopped;
+    }
+
+    setFrontpageLoaded = (b: boolean) => {
+        this.frontPageLoaded = b;
     }
 
     constructor() {
