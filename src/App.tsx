@@ -50,7 +50,7 @@ function App() {
 
   useEffect(() => {
     console.log(loaderStore.frontPageLoaded);
-    
+
     if (!loaderStore.frontPageLoaded) {
       loaderStore.startLoading();
       setTimeout(() => {
