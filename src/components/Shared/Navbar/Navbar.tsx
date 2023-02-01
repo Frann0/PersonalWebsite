@@ -61,9 +61,9 @@ const Navbar = () => {
         }
     }
 
-    const toggleHamburger = () => {
-        mobileStore.toggleHamburger();
-        setIsHamburgerOpen(!isHamburgerOpen)
+    const openHamburger = () => {
+        setIsHamburgerOpen(true)
+        mobileStore.openHamburger();
     }
 
 
@@ -98,7 +98,7 @@ const Navbar = () => {
                         <div className='Navbar_MainBar_logo' onClick={goTo('hero')}>
                             <img className='Navbar_MLogo' src={logo} alt="" />
                         </div>
-                        <div className='Navbar_hamburgerContainer' onClick={() => toggleHamburger()}>
+                        <div className='Navbar_hamburgerContainer' onClick={() => openHamburger()}>
                             <Icon name='hamburger' width={24} height={24} />
                         </div>
                     </>

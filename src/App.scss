@@ -157,9 +157,39 @@ body {
         color: #fff;
         text-align: center;
         text-decoration: none;
-        font-family: 'Visuelt Pro';
+        font-family: "Visuelt Pro";
       }
     }
+  }
+}
+
+.Hamburger_Opening {
+  animation: Hamburger_ContainerAnimation 0.5s ease-in-out forwards;
+}
+
+.Hamburger_Closing {
+  animation: Hamburger_ContainerAnimationReverse 0.5s ease-in-out forwards;
+}
+
+.Hamburger_Closed {
+  display: none;
+}
+
+@keyframes Hamburger_ContainerAnimation {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes Hamburger_ContainerAnimationReverse {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -100%;
   }
 }
 

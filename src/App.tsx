@@ -13,6 +13,7 @@ import { useEffect, useState } from 'react';
 import NotFoundPage from './pages/404Page/NotFoundPage';
 import { LoadingState } from './stores/loaderStore';
 import Loader from './components/Shared/Loader/Loader';
+import { HamburgerAnimationState } from './stores/mobileStore';
 
 function App() {
   const routes = [
@@ -24,6 +25,14 @@ function App() {
   const { mobileStore, loaderStore } = useStore();
 
   const [doneLoading, setDoneLoading] = useState<boolean>();
+
+  const [hamburgerAnimation, setHamburgerAnimation] = useState<string>('');
+
+  useEffect(() => {
+    setHamburgerAnimation(mobileStore.hamburgerAnimationState)
+    console.log(mobileStore.hamburgerAnimationState);
+    
+  }, [mobileStore.hamburgerAnimationState])
 
   const goTo = (path: string) => () => {
 
@@ -76,14 +85,14 @@ function App() {
                 {doneLoading &&
                   <>
                     {
-                      mobileStore.hamburgerOpen &&
-                      <div className='Hamburger_Container'>
+                      mobileStore.hamburgerAnimationState !== HamburgerAnimationState.Closed &&
+                      <div className={`Hamburger_Container ${hamburgerAnimation}`}>
                         <div className='Hamburger_Logo' >
-                          <a href='#hero' onClick={() => { mobileStore.toggleHamburger() }} >
+                          <a href='#hero' onClick={() => { mobileStore.closeHamburger() }} >
                             <img src={logo} alt='logo' />
                           </a>
                         </div>
-                        <div className='Hamburger_Close' onClick={() => mobileStore.toggleHamburger()}>
+                        <div className='Hamburger_Close' onClick={() => mobileStore.closeHamburger()}>
                           <Icon name='cross' />
                         </div>
                         <ul className='Hamburger_LinksWrapper'>
