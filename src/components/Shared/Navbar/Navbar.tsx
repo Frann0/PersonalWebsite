@@ -4,6 +4,8 @@ import logo from '../../../assets/shared/logo.svg'
 import Icon from '../icon/Icon'
 import { useStore } from '../../../stores/store'
 
+
+
 const Navbar = () => {
     const [isMobile, setIsMobile] = React.useState(false)
     const [isHamburgerOpen, setIsHamburgerOpen] = React.useState(false)
@@ -28,6 +30,10 @@ const Navbar = () => {
         }
     ]
 
+    addEventListener('resize', (e) => {
+        setIsMobile(window.innerWidth < 768);
+    })
+
     const goTo = (link: string) => {
 
 
@@ -47,15 +53,6 @@ const Navbar = () => {
             }
         }
     }
-
-    useEffect(() => {
-        setIsMobile(window.innerWidth < 768);
-
-
-        return () => {
-            setIsMobile(false)
-        }
-    }, [window.innerWidth])
 
     const toggleHamburger = () => {
         mobileStore.toggleHamburger();
