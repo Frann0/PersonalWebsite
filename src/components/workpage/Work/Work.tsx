@@ -10,9 +10,9 @@ const Work = () => {
         <div className='WorkComponent_Container' id='work'>
             <div className='WorkComponent_Wrapper'>
                 <div className='WorkComponent_InfoContainer'>
-                    <h1 className='WorkComponent_Title'>Latest Work.</h1>
+                    <h1 className='WorkComponent_Title'>Portfolio List</h1>
                     <p className='WorkComponent_Description'>
-                        This is a selection of my latest work, everything from design to fully fledged apps.
+                        Here are some of my best projects that showcase my skills and abilities. This is ofcourse not a definitive list as it will continue to grow as my career goes on. I hope you enjoy them!
                     </p>
                 </div>
                 <div className='WorkComponent_CardsContainer'>
