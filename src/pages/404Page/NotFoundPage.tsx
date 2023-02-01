@@ -3,12 +3,18 @@ import { useNavigate } from 'react-router-dom';
 import './NotFoundPage.scss'
 import logo from '../../assets/shared/logo.svg'
 import Footer from '../../components/Shared/Footer/Footer';
+import { useStore } from '../../stores/store';
 
 const NotFoundPage = () => {
     const navigate = useNavigate();
+    const { loaderStore } = useStore();
 
     const goToHome = () => {
-        navigate('/');
+        loaderStore.startLoading();
+        setTimeout(() => {
+            navigate('/');
+            loaderStore.stopLoading();
+        }, 2000)
     }
 
     return (
