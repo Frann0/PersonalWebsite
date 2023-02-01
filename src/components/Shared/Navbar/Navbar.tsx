@@ -36,6 +36,11 @@ const Navbar = () => {
         setIsMobile(window.innerWidth < 768);
     })
 
+    useEffect(() => {
+        setIsMobile(window.innerWidth < 768);
+    }, [])
+
+
     const goTo = (link: string) => {
 
 
