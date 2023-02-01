@@ -1,0 +1,51 @@
+.Next_Container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+    padding: 0;
+    background-color: #fff;
+    .Next_Wrapper{
+        width: 90%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        gap: 30px;
+        .Next_InfoContainer{
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .Next_Title{
+                font-size: 2rem;
+                font-weight: 600;
+                color: #1a1e29;
+                font-family: 'Visuelt Pro';
+                width: 100%;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+            }
+        }
+        .Next_CardsContainer{
+            width: 100%;
+            max-width: 600px;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+    }
+}

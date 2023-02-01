@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { projectDTO } from '../../../models/projects/projectInterfaces';
 import './Banner.scss'
 const Banner = (project: projectDTO) => {
