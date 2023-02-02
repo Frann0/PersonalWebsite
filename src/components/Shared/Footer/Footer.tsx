@@ -20,11 +20,11 @@ const Footer = () => {
     },
     {
       name: 'codepen',
-      link: '',
+      link: 'https://codepen.io/franno',
     },
     {
       name: 'dribble',
-      link: '',
+      link: 'https://dribbble.com/Franno',
     },
   ]
 
