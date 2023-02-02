@@ -1,10 +1,9 @@
 .Hero_Container {
-    margin-top: 40px;
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
-    background: url(../../../assets/hero.jpg);
+    background: url(../../../assets/test.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,123 +13,93 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        .Hero_ImageContainer {
-            width: 200px;
-            height: 200px;
-            margin-top: 180px;
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-            margin-bottom: 30px;
-        }
-        .Hero_ContentContainer {
-            width: 100%;
-            height: fit-content;
+
+        .Hero_Content {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-
-            .Hero_Name {
-                font-size: 1.85rem;
-                font-weight: 700;
-                color: #12151a;
-                text-align: center;
-                margin: 0;
-                padding: 0;
-                font-family: 'Visuelt Pro';
-            }
-            .Hero_Title {
-                font-size: 1.25rem;
-
-                @media screen and (max-width: 768px) {
-                    font-size: 1rem;
-                }
-                font-weight: 200;
-                color: #12151a;
-                text-align: center;
-
-                margin: 0 0 25px 0;
-
-                padding: 0;
-                font-family: 'Visuelt Pro';
-
-            }
-            .Hero_Description {
-                font-size: 1rem;
-                font-weight: 200;
-                color: #12151a;
-
-                text-align: center;
-                margin: 0 0 0 0;
-                padding: 0;
-                margin-bottom: 10px;
-
-                &:last-child {
-                    margin-bottom: 25px;
-                }
-                font-family: 'Visuelt Pro';
-            }
-            .Hero_Highlight {
-                color: #01c38c;
-            }
-        }
-
-        .Hero_CalltoactionContainer {
-            width: 100%;
-            height: 40px;
-            display: flex;
             justify-content: center;
-            align-items: center;
-            margin-bottom: 150px;
-
-            .Hero_CalltoactionButton {
-                width: fit-content;
-                height: 40px;
-                border-radius: 20px;
-                background-color: #12151a;
-                color: #fff;
-                font-size: 1rem;
-                padding: 0 40px;
-                border: none;
-                cursor: pointer;
-                font-family: 'Roboto';
-            }
-        }
-        .Hero_ScrollContainer {
-            @media screen and (max-width: 768px) {
-                display: none;
-            }
-            margin-bottom: 150px;
-            width: 100%;
             height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
+            width: 100%;
+            gap: 20px;
+            .Hero_ImageContainer {
+                width: 200px;
+                height: 200px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .Hero_ContentContainer {
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
 
-            img {
-                width: 40px;
+                .Hero_Name {
+                    font-size: 1.85rem;
+                    font-weight: 700;
+                    color: #fff;
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
+                    font-family: "Visuelt Pro";
+                    letter-spacing: .05em;
+                }
+                .Hero_Title {
+                    font-size: 1.25rem;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 1rem;
+                    }
+                    font-weight: 200;
+                    color: #fff;
+                    text-align: center;
+
+                    margin: 0 0 25px 0;
+
+                    padding: 0;
+                    font-family: "Visuelt Pro";
+                }
+                .Hero_Description {
+                    font-size: 1rem;
+                    font-weight: 200;
+                    color: #fff;
+
+                    text-align: center;
+                    margin: 0 0 0 0;
+                    padding: 0;
+                    margin-bottom: 10px;
+                    font-family: "Visuelt Pro";
+                }
+                .Hero_Highlight {
+                    color: #01c38c;
+                }
+            }
+
+            .Hero_CalltoactionContainer {
+                width: 100%;
                 height: 40px;
-                object-fit: cover;
-                &:hover {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .Hero_CalltoactionButton {
+                    width: fit-content;
+                    height: 40px;
+                    border-radius: 20px;
+                    background-color: #12151a;
+                    color: #fff;
+                    font-size: 1rem;
+                    padding: 0 40px;
+                    border: none;
                     cursor: pointer;
-                    animation: bounce 1s infinite ease-in-out;
+                    font-family: "Roboto";
                 }
             }
         }
-    }
-}
-
-@keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
     }
 }

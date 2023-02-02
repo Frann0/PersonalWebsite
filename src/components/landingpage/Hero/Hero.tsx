@@ -16,34 +16,31 @@ const Hero = () => {
     <div className='Hero_Container' id='hero'>
       <div className='Hero_Wrapper'>
 
-        <div className='Hero_ImageContainer'>
-          <img className='Hero_Image' src={logo} alt='logo' />
-        </div>
+        <div className='Hero_Content'>
+          <div className='Hero_ImageContainer'>
+            <img className='Hero_Image' src={logo} alt='logo' />
+          </div>
 
-        <div className='Hero_ContentContainer'>
-          <h1 className='Hero_Name'>
-            Mike Handberg Hovedskov
-          </h1>
-          <h2 className='Hero_Title'>
-            UI/UX Designer - Frontend Web Developer
-          </h2>
-          <p className='Hero_Description'>
-            I am a <span className='Hero_Highlight'>passionate</span> UI/UX Designer and Frontend Developer
+          <div className='Hero_ContentContainer'>
+            <h1 className='Hero_Name'>
+              Mike Handberg Hovedskov
+            </h1>
+            <h2 className='Hero_Title'>
+              UI/UX Designer - Frontend Web Developer
+            </h2>
+            <p className='Hero_Description'>
+              I am a <span className='Hero_Highlight'>passionate</span> UI/UX Designer and Frontend Developer
 
-          </p>
-          <p className='Hero_Description'>
-            Let's work together!
-          </p>
-        </div>
-        <div className='Hero_CalltoactionContainer'>
-          <button className='Hero_CalltoactionButton' onClick={goTo('contact')}>
-            Contact me
-          </button>
-        </div>
-
-
-        <div className='Hero_ScrollContainer'>
-          <img src={scroll} alt="" onClick={goTo('about')} />
+            </p>
+            <p className='Hero_Description'>
+              Let's work together!
+            </p>
+          </div>
+          <div className='Hero_CalltoactionContainer'>
+            <button className='Hero_CalltoactionButton' onClick={goTo('contact')}>
+              Contact me
+            </button>
+          </div>
         </div>
       </div>
     </div>

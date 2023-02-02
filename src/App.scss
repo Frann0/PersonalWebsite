@@ -30,6 +30,15 @@ body {
   width: 100%;
 }
 
+img{
+  -webkit-user-drag: none;
+}
+
+::selection {
+  background: #ffffff;
+  color: #12151a;
+}
+
 * {
   scroll-behavior: smooth;
 }
