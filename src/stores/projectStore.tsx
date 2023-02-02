@@ -84,7 +84,7 @@ export class ProjectStore {
             title: 'Riv4lz',
             category: 'Web Application',
             link: '/project/2',
-            image: 'https://i.imgur.com/SQdY6AZ.png',
+            image: 'https://i.imgur.com/7WgPwQ6.png',
             info: {
                 about: 'Riv4lz came as an idea by one of my friends, during our 4 semester in our fullstack development elective course. Our problem was that there really isn\'t any online platforms for amateur game casters to get any jobs or for that matter any practice in their abilities. Riv4lz strives to fill that gab, by allowing caster and organisations to sign up to our site. Where the organisations then can create matches amateur casters could apply for. That solves problems for both parties. The organisations get cheaper casters and amateurs get some money and practise at the craft.',
                 involement: 'As said the idea was one of my friends\' which meant we also had to build this in a group. My involvement in the project came in as a frontend developer and designer. I also came with inputs on how things could be done and what features could be built.',
