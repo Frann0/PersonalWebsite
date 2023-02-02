@@ -21,8 +21,6 @@ const Loader = () => {
 
     useEffect(() => {
         setAnimation(getAnimation());
-        console.log('loaderStore.loadingState', loaderStore.loadingState);
-
     }, [loaderStore.loadingState])
 
 

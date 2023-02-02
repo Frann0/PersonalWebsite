@@ -14,7 +14,6 @@ const ProjectPage = () => {
     const [project, setProject] = React.useState<projectDTO>(projectStore.projects[parseInt(params.id!)]);
 
     useEffect(() => {
-        document.getElementsByClassName('ProjectPage_Container')[0].scrollTo(0, 0);
         setProject(projectStore.projects[parseInt(params.id!)])
 
     }, [params.id])

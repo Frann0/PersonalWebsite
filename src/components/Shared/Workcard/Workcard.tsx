@@ -12,6 +12,15 @@ const Workcard = (card: projectDTO) => {
     const goto = () => {
         loaderStore.startLoading()
         setTimeout(() => {
+            const t = document.getElementsByClassName('ProjectPage_Container')[0]
+
+            if (t !== undefined) {
+                t.scrollTo(0, 0);
+            }
+        }, 1000)
+
+
+        setTimeout(() => {
             navigate(`${card.link}`)
             loaderStore.stopLoading()
         }, 2000)

@@ -6,12 +6,7 @@ export class LoaderStore {
     frontPageLoaded = false;
 
     startLoading = () => {
-        console.log('startLoading');
-        
-        this.loadingState = LoadingState.starting;
-
-        console.log('this.loadingState', this.loadingState);
-        
+        this.loadingState = LoadingState.starting
 
         setTimeout(() => {
             this.loadingState = LoadingState.started;
