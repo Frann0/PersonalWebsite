@@ -2,11 +2,20 @@ import React from 'react'
 import './About.scss'
 import billede from '../../../assets/about_billede.png'
 import Icon from '../../Shared/icon/Icon'
+import a from '../../../assets/a.pdf'
 
 const About = () => {
 
   const handleDownloadCV = () => {
-    window.open('https://drive.google.com/u/0/uc?id=1NcyY9cBJALA_1wToQ53PXZhLUhGHh6AG&export=download', '_blank')
+    fetch('a.pdf').then(response => {
+      response.blob().then(blob => {
+        const fileURL = window.URL.createObjectURL(blob);
+        let alink = document.createElement('a');
+        alink.href = fileURL;
+        alink.download = 'CV - Mike Hovedskov.pdf';
+        alink.click();
+      })
+    })
   }
 
   return (
