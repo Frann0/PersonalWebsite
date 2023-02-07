@@ -1,6 +1,6 @@
 import React from 'react'
 import './About.scss'
-import billede from '../../../assets/About-billede-Temp.svg'
+import billede from '../../../assets/about_billede.png'
 import Icon from '../../Shared/icon/Icon'
 
 const About = () => {
