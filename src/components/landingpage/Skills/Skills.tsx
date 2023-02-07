@@ -43,11 +43,9 @@ const Skills = () => {
     <div className='Skills_Container' id='skills'>
       <div className='Skills_Wrapper'>
         <div className='Skills_ContentContainer'>
-          {!isMobile &&
-            <div className='Skills_PicContainer'>
-              <img className='Skills_Pic' src={SkillsPic} alt="" />
-            </div>
-          }
+          <div className='Skills_PicContainer'>
+            <img className='Skills_Pic' src={SkillsPic} alt="" />
+          </div>
           <div className='Skills_InfoContainer'>
             <div className='Skills_InfoContentContainer'>
               <h1 className='Skills_InfoTitle'>What I use.</h1>
