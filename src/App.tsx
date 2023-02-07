@@ -19,6 +19,7 @@ import { RootState } from './reduxStores/store';
 import { startLoading, stopLoading } from './reduxStores/loaderSlice';
 import { closeHamburger, toggleHamburger } from './reduxStores/mobileSlice';
 
+
 function App() {
   const routes = [
     { path: '/', element: <LandingPage /> },
@@ -42,6 +43,11 @@ function App() {
     console.log(mobileHamburgerAnimationState);
 
   }, [mobileHamburgerAnimationState])
+
+  useEffect(() => {
+    console.log(loadingState)
+  }, [loadingState])
+
 
   const goTo = (path: string) => () => {
 

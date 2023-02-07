@@ -16,9 +16,11 @@ export const loaderSlice = createSlice({
     },
     reducers: {
         startLoading: (state) => {
+            console.log('startLoading')
             state.loadingState = LoadingState.starting;
 
             setTimeout(() => {
+                console.log('stopLoading')
                 state.loadingState = LoadingState.started;
             }, 1000);
         }

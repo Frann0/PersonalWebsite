@@ -49,11 +49,8 @@ const Loader = () => {
         <div className='Loader_Container'>
             {loadingState !== LoadingState.stopped && loadingState !== LoadingState.stopping ?
                 <div className='Loader_Logo'>
-
                     <img src={logo} alt=" logo" className={`Loader_LogoImage ${animation.logo}`} />
-
                     <div className={`Loader_bar ${animation.loaderBar}`}>
-
                     </div>
                 </div>
                 : null

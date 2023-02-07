@@ -4,13 +4,18 @@ import logo from '../../../assets/shared/logo.svg'
 import Icon from '../icon/Icon'
 import { useStore } from '../../../stores/store'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { startLoading, stopLoading } from '../../../reduxStores/loaderSlice'
+import { openHamburger } from '../../../reduxStores/mobileSlice'
 
 
 
 const Navbar = () => {
     const [isMobile, setIsMobile] = React.useState(false)
     const [isHamburgerOpen, setIsHamburgerOpen] = React.useState(false)
-    const { mobileStore, loaderStore } = useStore();
+
+    const dispatch = useDispatch();
+
     const navigate = useNavigate();
 
     const links = [
@@ -48,11 +53,11 @@ const Navbar = () => {
             e.preventDefault()
             let currentPath = window.location.pathname;
             if (currentPath !== '/') {
-                loaderStore.startLoading()
-
+                //loaderStore.startLoading()
+                dispatch(startLoading)
                 setTimeout(() => {
                     navigate(`/#${link}`)
-                    loaderStore.stopLoading()
+                    dispatch(stopLoading)
                 }, 2000)
             }
             else {
@@ -61,9 +66,9 @@ const Navbar = () => {
         }
     }
 
-    const openHamburger = () => {
+    const openMobile = () => {
         setIsHamburgerOpen(true)
-        mobileStore.openHamburger();
+        dispatch(openHamburger)
     }
 
 
@@ -98,7 +103,7 @@ const Navbar = () => {
                         <div className='Navbar_MainBar_logo' onClick={goTo('hero')}>
                             <img className='Navbar_MLogo' src={logo} alt="" />
                         </div>
-                        <div className='Navbar_hamburgerContainer' onClick={() => openHamburger()}>
+                        <div className='Navbar_hamburgerContainer' onClick={() => openMobile()}>
                             <Icon name='hamburger' width={24} height={24} />
                         </div>
                     </>
