@@ -1,5 +1,8 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
+import { startLoading, stopLoading } from '../../../reduxStores/loaderSlice'
+import { RootState } from '../../../reduxStores/store'
 import { useStore } from '../../../stores/store'
 import Workcard from '../../Shared/Workcard/Workcard'
 import './Work.scss'
@@ -7,11 +10,15 @@ const Work = () => {
   const navigate = useNavigate()
   const { loaderStore } = useStore();
 
+
+  const dispatch = useDispatch();
+  const projects = useSelector((state: RootState) => state.project)
+
   const goTo = (path: string) => () => {
-    loaderStore.startLoading()
+    dispatch(startLoading)
     setTimeout(() => {
       navigate(path)
-      loaderStore.stopLoading()
+      dispatch(stopLoading)
     }, 2000)
   }
 
@@ -27,7 +34,7 @@ const Work = () => {
           </p>
         </div>
         <div className='Work_CardsContainer'>
-          {projectStore.projects.slice(0, 6).map((card, index) => (
+          {projects.slice(0, 6).map((card, index) => (
             <Workcard {...card} key={index} />
           ))}
 

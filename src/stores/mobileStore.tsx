@@ -40,6 +40,7 @@ export class MobileStore {
 
 }
 
+
 export enum HamburgerAnimationState {
     Opening = 'Hamburger_Opening',
     Closing = 'Hamburger_Closing',

@@ -14,6 +14,10 @@ import NotFoundPage from './pages/404Page/NotFoundPage';
 import { LoadingState } from './stores/loaderStore';
 import Loader from './components/Shared/Loader/Loader';
 import { HamburgerAnimationState } from './stores/mobileStore';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from './reduxStores/store';
+import { startLoading, stopLoading } from './reduxStores/loaderSlice';
+import { closeHamburger, toggleHamburger } from './reduxStores/mobileSlice';
 
 function App() {
   const routes = [
@@ -28,11 +32,16 @@ function App() {
 
   const [hamburgerAnimation, setHamburgerAnimation] = useState<string>('');
 
+  const mobileHamburgerAnimationState = useSelector((state: RootState) => state.mobile.hamburgerAnimationState)
+  const frontPageLoaded = useSelector((state: RootState) => state.loader.frontPageLoaded)
+  const loadingState = useSelector((state: RootState) => state.loader.loadingState)
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    setHamburgerAnimation(mobileStore.hamburgerAnimationState)
-    console.log(mobileStore.hamburgerAnimationState);
-    
-  }, [mobileStore.hamburgerAnimationState])
+    setHamburgerAnimation(mobileHamburgerAnimationState)
+    console.log(mobileHamburgerAnimationState);
+
+  }, [mobileHamburgerAnimationState])
 
   const goTo = (path: string) => () => {
 
@@ -41,27 +50,42 @@ function App() {
     console.log(path);
 
     if (currentPath !== '/') {
-      loaderStore.startLoading()
+      //loaderStore.startLoading()
+      dispatch(startLoading)
 
       setTimeout(() => {
         window.location.href = `/#${path}`
-        loaderStore.stopLoading()
+        dispatch(stopLoading)
       }, 2000)
     }
     else {
 
       window.location.hash = `${path}`
     }
-    mobileStore.toggleHamburger();
+    //mobileStore.toggleHamburger();
+    dispatch(toggleHamburger)
 
   }
 
 
   useEffect(() => {
-    console.log(loaderStore.frontPageLoaded);
+    if (!frontPageLoaded) {
+      dispatch(startLoading)
 
+      setTimeout(() => {
+        setDoneLoading(true);
+        dispatch(stopLoading)
+      }, 2000)
+    } else {
+      setDoneLoading(true);
+    }
+
+
+
+    /*
     if (!loaderStore.frontPageLoaded) {
-      loaderStore.startLoading();
+      //loaderStore.startLoading();
+    
       setTimeout(() => {
         setDoneLoading(true);
         loaderStore.setFrontpageLoaded(true)
@@ -70,13 +94,14 @@ function App() {
     } else {
       setDoneLoading(true);
     }
+    */
 
   }, [])
 
 
   return (
     <div className="App">
-      {loaderStore.loadingState !== LoadingState.stopped && <Loader />}
+      {loadingState !== LoadingState.stopped && <Loader />}
       <Router>
         <Routes>
           {routes.map((route, index) => (
@@ -85,14 +110,14 @@ function App() {
                 {doneLoading &&
                   <>
                     {
-                      mobileStore.hamburgerAnimationState !== HamburgerAnimationState.Closed &&
+                      mobileHamburgerAnimationState !== HamburgerAnimationState.Closed &&
                       <div className={`Hamburger_Container ${hamburgerAnimation}`}>
                         <div className='Hamburger_Logo' >
-                          <a href='#hero' onClick={() => { mobileStore.closeHamburger() }} >
+                          <a href='#hero' onClick={() => { closeHamburger() }} >
                             <img src={logo} alt='logo' />
                           </a>
                         </div>
-                        <div className='Hamburger_Close' onClick={() => mobileStore.closeHamburger()}>
+                        <div className='Hamburger_Close' onClick={() => closeHamburger()}>
                           <Icon name='cross' />
                         </div>
                         <ul className='Hamburger_LinksWrapper'>

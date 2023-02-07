@@ -3,9 +3,12 @@ import { LoadingState } from '../../../stores/loaderStore';
 import { useStore } from '../../../stores/store';
 import './Loader.scss'
 import logo from '../../../assets/shared/logo_green.svg'
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../../reduxStores/store';
 
 const Loader = () => {
-    const { loaderStore } = useStore();
+    const dispatch = useDispatch();
+    const loadingState = useSelector((state: RootState) => state.loader.loadingState)
 
     const [animation, setAnimation] = React.useState<{ topBar: string, bottomBar: string, loaderBar: string, logo: string }>(
         {
@@ -20,12 +23,12 @@ const Loader = () => {
 
 
     useEffect(() => {
-        setAnimation(getAnimation());
-    }, [loaderStore.loadingState])
+        setAnimation(getAnimation()!)
+    }, [loadingState])
 
 
     const getAnimation = () => {
-        switch (loaderStore.loadingState) {
+        switch (loadingState) {
             case LoadingState.starting:
                 return { topBar: 'Loader_top_Animation_Starting', bottomBar: 'Loader_bottom_Animation_Starting', loaderBar: 'Loader_bar_Animation_Starting', logo: 'Loader_Logo_Animation_Starting' }
             case LoadingState.started:
@@ -44,7 +47,7 @@ const Loader = () => {
 
     return (
         <div className='Loader_Container'>
-            {loaderStore.loadingState !== LoadingState.stopped && loaderStore.loadingState !== LoadingState.stopping ?
+            {loadingState !== LoadingState.stopped && loadingState !== LoadingState.stopping ?
                 <div className='Loader_Logo'>
 
                     <img src={logo} alt=" logo" className={`Loader_LogoImage ${animation.logo}`} />

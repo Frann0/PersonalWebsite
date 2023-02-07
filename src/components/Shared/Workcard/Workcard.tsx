@@ -1,16 +1,17 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import { projectDTO } from '../../../models/projects/projectInterfaces'
+import { startLoading, stopLoading } from '../../../reduxStores/loaderSlice'
 import { useStore } from '../../../stores/store'
 import './Workcard.scss'
 
 const Workcard = (card: projectDTO) => {
-
-    const { loaderStore } = useStore();
+    const dispatch = useDispatch();
     const navigate = useNavigate();
 
     const goto = () => {
-        loaderStore.startLoading()
+        dispatch(startLoading)
         setTimeout(() => {
             const t = document.getElementsByClassName('ProjectPage_Container')[0]
 
@@ -22,7 +23,7 @@ const Workcard = (card: projectDTO) => {
 
         setTimeout(() => {
             navigate(`${card.link}`)
-            loaderStore.stopLoading()
+            dispatch(stopLoading)
         }, 2000)
 
     }

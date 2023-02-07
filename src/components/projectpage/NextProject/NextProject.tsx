@@ -1,23 +1,26 @@
 import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { projectDTO } from '../../../models/projects/projectInterfaces';
+import { RootState } from '../../../reduxStores/store';
 import { useStore } from '../../../stores/store';
 import Workcard from '../../Shared/Workcard/Workcard';
 import './NextProject.scss'
 const NextProject = () => {
-    const { projectStore } = useStore();
+    const dispatch = useDispatch();
+    const projects = useSelector((state: RootState) => state.project)
     const params = useParams();
     const [nextProject, setNextProject] = React.useState<projectDTO>();
 
     useEffect(() => {
-        if (parseInt(params.id!) === projectStore.projects.length - 1) {
-            setNextProject(projectStore.projects[0])
+        if (parseInt(params.id!) === projects.length - 1) {
+            setNextProject(projects[0])
         }
         else {
-            setNextProject(projectStore.projects[parseInt(params.id!) + 1])
+            setNextProject(projects[parseInt(params.id!) + 1])
         }
 
-        projectStore.projects[parseInt(params.id!)]
+        projects[parseInt(params.id!)]
     }, [params.id])
 
     return (

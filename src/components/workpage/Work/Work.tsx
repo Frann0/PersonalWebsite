@@ -1,10 +1,12 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootState } from '../../../reduxStores/store'
 import { useStore } from '../../../stores/store'
 import Workcard from '../../Shared/Workcard/Workcard'
 import './Work.scss'
 const Work = () => {
-
-    const { projectStore } = useStore();
+    const projects = useSelector((state: RootState) => state.project)
+    const dispatch = useDispatch();
 
     return (
         <div className='WorkComponent_Container' id='work'>
@@ -16,7 +18,7 @@ const Work = () => {
                     </p>
                 </div>
                 <div className='WorkComponent_CardsContainer'>
-                    {projectStore.projects.map((card, index) => (
+                    {projects.map((card, index) => (
                         <Workcard {...card} key={index} />
                     ))}
 
