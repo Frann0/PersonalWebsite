@@ -205,6 +205,32 @@ export class ProjectStore {
                 }
             ]
         },
+        {
+            title: 'Webdock',
+            category: 'Web application',
+            link: '/project/6',
+            image: 'https://i.imgur.com/pJ0oLf2.png',
+            info: {
+                about: 'Webdock was my first project during my bachelor in Webdevelopment. The project was a collaboration between me, 3 other students and the company Webdock A/S which set the task for us. The task was to create a standalone web application that could replace their current system for creating and managing user feedback. ',
+                involement: 'My involvement in the project was mostly the backend coding. I handled the backend stack which was Bun, Elysia, Prisma, mysql database and KrakenD. I also had a hand in the frontend, but my main focus was the backend. It was exciting, as i could utilize some new technologies that just reached the market, in a professional manner and not just for fun. And also architechting and orchestrating the whole backend stack was a fun challenge.',
+                platform: 'Web',
+                tools: ['Vue', 'Typescript', 'Sass', 'Figma', 'Bun', 'Elysia', 'Prisma', 'Mysql', 'KrakenD']
+            },
+
+            carouselImages: [
+                'https://i.imgur.com/pJ0oLf2.png',
+                'https://i.imgur.com/H0ml1zd.png',
+                'https://i.imgur.com/csHQCrg.png',
+            ],
+            resources: [
+                {
+                    iconName: 'github',
+                    title: 'Github',
+                    link: 'https://github.com/4xHTeam1/webdock',
+                    buttonClass: ProjectResourceButtonClasses.GITHUB
+                }
+            ]
+        },
 
 
     ];

@@ -28,7 +28,12 @@ const Skills = () => {
     'Sass',
     'NPM',
     'Angular',
-    'Vite'
+    'Vite',
+    'Bun',
+    'Elysia',
+    'Express',
+    'Prisma',
+    'Docker'
   ]
 
   useEffect(() => {
